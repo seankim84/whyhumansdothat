@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 1 — Catch the Performance · The Likeability Lie (free)</title>
+  <meta name="description" content="Day 1 of The Likeability Lie, free. Catch one moment of performing — the first rep of a 7-day training program." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root { --bg: #FAFAFA; --surface: #FFFFFF; --text: #1A1A1A; --text-muted: #6B6B6B; --border: #E8E8E8; --black: #1A1A1A; --max: 1080px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; letter-spacing: -0.01em; }
+    a { color: inherit; }
+
+    /* Header */
+    header { border-bottom: 1px solid var(--border); background: var(--bg); }
+    .header-inner { max-width: var(--max); margin: 0 auto; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand-name { font-size: 16px; font-weight: 700; letter-spacing: -0.02em; text-decoration: none; }
+    .back { font-size: 14px; font-weight: 500; color: var(--text-muted); text-decoration: none; }
+    .back:hover { color: var(--text); }
+
+    /* Progress strip */
+    .free-strip { background: #1A1A1A; color: #fff; text-align: center; font-size: 13px; font-weight: 500; padding: 9px 16px; letter-spacing: 0.01em; }
+
+    /* Reading */
+    .reading { max-width: 680px; margin: 0 auto; padding: 48px 24px 24px; }
+    .kicker { font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-muted); }
+    h1 { font-size: 40px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.08; margin-top: 12px; }
+    .facts { list-style: none; margin: 22px 0 0; padding: 18px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); display: grid; gap: 8px; }
+    .facts li { font-size: 14px; color: var(--text-muted); }
+    .facts li strong { color: var(--text); font-weight: 600; }
+
+    .prose { margin-top: 8px; }
+    .prose p { font-size: 18px; line-height: 1.75; color: #262626; margin-top: 20px; }
+    .prose h2 { font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-top: 44px; }
+    .prose .big-line { font-size: 22px; font-weight: 600; color: #1A1A1A; line-height: 1.5; }
+    .prose em { font-style: italic; }
+
+    /* Observer callout */
+    .observer { background: #F4F4F4; border-radius: 12px; padding: 24px 26px; margin-top: 28px; }
+    .observer .lbl { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #1A1A1A; display: flex; align-items: center; gap: 8px; }
+    .observer .lbl svg { width: 16px; height: 16px; stroke: #1A1A1A; fill: none; stroke-width: 1.7; }
+    .observer p { font-size: 17px; line-height: 1.7; color: #333; margin-top: 12px; }
+    .observer p:first-of-type { margin-top: 14px; }
+
+    /* Task boxes */
+    .box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px 26px; margin-top: 28px; }
+    .box .b-title { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+    .box p { font-size: 17px; line-height: 1.7; color: #333; margin-top: 12px; }
+    .box .quote { font-size: 18px; font-weight: 500; color: #1A1A1A; margin-top: 14px; }
+    .box ul { list-style: none; margin-top: 14px; display: grid; gap: 10px; }
+    .box ul li { font-size: 16px; color: #333; padding-left: 18px; position: relative; }
+    .box ul li:before { content: "—"; position: absolute; left: 0; color: #B0B0B0; }
+    .box .scale { font-size: 14px; color: var(--text-muted); margin-top: 10px; }
+
+    .complete { text-align: center; margin-top: 44px; padding-top: 32px; border-top: 1px solid var(--border); }
+    .complete .check { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); }
+    .complete .next { font-size: 18px; color: var(--text-muted); margin-top: 12px; }
+
+    /* Final CTA back to program */
+    .cta { max-width: 680px; margin: 8px auto 0; padding: 24px; }
+    .cta-card { background: #1A1A1A; color: #fff; border-radius: 16px; padding: 40px 32px; text-align: center; }
+    .cta-card .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #9A9A9A; }
+    .cta-card h2 { font-size: 26px; font-weight: 700; letter-spacing: -0.02em; margin-top: 12px; color: #fff; }
+    .cta-card p { font-size: 16px; color: #C8C8C8; margin-top: 12px; max-width: 440px; margin-left: auto; margin-right: auto; }
+    .cta-card .price { font-size: 15px; color: #fff; margin-top: 18px; }
+    .cta-card .price s { color: #8A8A8A; margin-left: 6px; }
+    .cta-btn { display: inline-block; background: #fff; color: #1A1A1A; font-size: 16px; font-weight: 600; padding: 15px 32px; border-radius: 10px; margin-top: 18px; text-decoration: none; transition: opacity .15s, transform .15s; }
+    .cta-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+    .cta-card .fine { font-size: 12px; color: #8A8A8A; margin-top: 14px; }
+
+    footer { border-top: 1px solid var(--border); margin-top: 40px; }
+    .footer-inner { max-width: var(--max); margin: 0 auto; padding: 32px 24px; text-align: center; }
+    .copyright { font-size: 12px; color: #A0A0A0; }
+
+    @media (max-width: 620px) { h1 { font-size: 32px; } .prose p { font-size: 17px; } }
+  </style>
+</head>
+<body>
+
+  <div class="free-strip">Free preview · Day 1 of 7 — no signup required</div>
+
+  <header>
+    <div class="header-inner">
+      <a class="brand-name" href="index.html">Why Humans Do That</a>
+      <a class="back" href="the-likeability-lie.html">← Back to the program</a>
+    </div>
+  </header>
+
+  <article class="reading">
+    <div class="kicker">Session 1 · Day 1</div>
+    <h1>Catch the Performance</h1>
+    <ul class="facts">
+      <li><strong>Training focus</strong> — Seeing yourself in the act</li>
+      <li><strong>Today's goal</strong> — Catch one moment of performing. Don't fix it yet.</li>
+      <li><strong>Estimated time</strong> — 18 minutes</li>
+    </ul>
+
+    <div class="observer">
+      <div class="lbl"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/></svg>The Observer</div>
+      <p>Before you start, one instruction.</p>
+      <p>Don't try to understand today's reading. Don't take notes on the psychology. That's not the workout.</p>
+      <p>Your job today is simpler and harder: catch yourself inside it. Somewhere in the next few pages, you're going to recognize something you do. When it happens, don't rush past it.</p>
+      <p>That moment is the training. Begin.</p>
+    </div>
+
+    <div class="prose">
+      <h2>The lie you've been told</h2>
+      <p>Somewhere along the way, you were handed a question and told it was the right one to ask.</p>
+      <p class="big-line"><em>How do I get people to like me?</em></p>
+      <p>It seems harmless. Reasonable, even. You've probably asked it before a first date, before a job interview, before walking into a room where you didn't know anyone. And every answer the world gave you pointed in the same direction.</p>
+      <p>Smile more. Talk more. Be helpful. Be agreeable. Say yes. Show interest. Be available.</p>
+      <p>None of it is wrong, exactly. But all of it rests on one quiet assumption you've never stopped to question — that people like you because of what you <em>do</em>. That likability is something you build, brick by brick, out of effort.</p>
+      <p>Here's the part nobody told you.</p>
+      <p class="big-line">The harder you work at being liked, the more you feel it slipping away.</p>
+      <p>You've seen this. You just called it something else.</p>
+      <p>Think of the last time you really wanted someone's approval. A person you admired, maybe a little too much. Notice what happened to you around them. You got careful. You rehearsed sentences before you said them. You laughed a half-second too early. You agreed with things you didn't fully believe. And some part of you knew, even as you did it, that you were shrinking.</p>
+      <p>Now think of the opposite. Think of a person you couldn't stop thinking about long after they left the room.</p>
+      <p>They probably weren't the loudest one there. They weren't performing. They didn't seem to need anything from you at all. And that — the not needing — is exactly what made them impossible to forget.</p>
+      <p>You remember them because of how you <em>felt</em> around them. Not what they did for you. Not how impressive they were. How you felt.</p>
+    </div>
+
+    <div class="observer">
+      <div class="lbl"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z"/></svg>The Observer</div>
+      <p>Stop here.</p>
+      <p>Two people just went through your mind. The one you performed for. The one you couldn't forget.</p>
+      <p>Write down the first one's name. Just the name. If you don't want to write it — that's probably the name.</p>
+      <p>Don't keep reading until you do. The page will wait.</p>
+    </div>
+
+    <div class="prose">
+      <p>That's the thing the world got backwards. You were taught that being liked is something you earn by doing enough of the right things. But approval doesn't work like a bank account. There's no balance you can build up high enough. The people who chase it hardest are the ones who always seem to run out.</p>
+      <p>You already know someone like that. The person who's always available, always agreeing, always helping, always <em>there</em> — and somehow the more they give, the less anyone seems to value them. It isn't fair. It's just how the human mind works.</p>
+      <p>I spent years on the wrong side of this. Kind, reliable, endlessly accommodating — and quietly baffled that it wasn't working. I thought I hadn't done enough yet. I had it exactly backwards.</p>
+      <p>So did you. Not because you're foolish. Because you were taught to.</p>
+      <p>And here's the strange thing: scientists proved all of this a long time ago — with a cup of coffee.</p>
+      <p>In 1966, at the University of Minnesota, a psychologist named Elliot Aronson sat people down and had them listen to a recording. On the tape, a man was answering a series of difficult quiz questions — and he was brilliant. He got nearly every answer right. He mentioned, almost in passing, a life full of achievement. He was, by any measure, impressive.</p>
+      <p>Then, on some of the tapes, one more thing happened. Near the end, there was a clatter — an audible mess — and a flustered voice admitting he'd just spilled coffee all over himself.</p>
+      <p>A stupid little accident. Nothing more.</p>
+      <p>Aronson then asked the listeners a simple question: how much do you like this man?</p>
+      <p>You already know the rule you were raised on. Mistakes cost you points. The man who spilled the coffee humiliated himself, so he should have been liked less.</p>
+      <p>He wasn't.</p>
+      <p>The brilliant man who spilled the coffee was rated <em>more</em> likable than the brilliant man who didn't. The exact same accomplishments, the exact same voice — and the version who fumbled was the one people warmed to. The blunder didn't subtract anything.</p>
+      <p class="big-line">It added something.</p>
+      <p>Sit with how strange that is. A mistake — the exact thing you spend your days trying not to make in front of people — made a man easier to like.</p>
+      <p>Which raises a question that should bother you tonight. If a spilled cup of coffee can pull people closer… what is all your carefulness actually doing?</p>
+      <p>Tomorrow, the second half of that experiment. It has a twist — and the twist is where your whole strategy comes apart.</p>
+    </div>
+
+    <div class="box">
+      <div class="b-title">Drill — Name and number</div>
+      <p>Open your notes. First, finish this sentence with the name you just wrote:</p>
+      <p class="quote">"The person I'm trying too hard with right now is ______."</p>
+      <p>Now one number. Around this person, how much do you edit yourself?</p>
+      <p class="scale">1 — I'm basically myself &nbsp;·&nbsp; 5 — I become someone else</p>
+      <p>Write the number next to the name. No judgment, no fixing. This is your starting weight — you'll lift it again on Day 7 and see what's changed.</p>
+    </div>
+
+    <div class="box">
+      <div class="b-title">Today's mission</div>
+      <p>For the rest of today, catch one moment of performing. Look for one of these:</p>
+      <ul>
+        <li>the laugh that comes half a second too early</li>
+        <li>the agreement you don't actually mean</li>
+        <li>the "I'm fine" that hides what's true</li>
+        <li>the moment you make yourself easier to like, but harder to know</li>
+      </ul>
+      <p>When it happens, don't stop it. Don't fix it. Don't judge it. Just say quietly: <em>there it is.</em> That's today's rep.</p>
+    </div>
+
+    <div class="complete">
+      <div class="check">✓ Day 1 complete</div>
+      <p class="next">You did the thing most people never do — you watched yourself in the act, without looking away.</p>
+    </div>
+  </article>
+
+  <!-- CTA back to the program -->
+  <section class="cta">
+    <div class="cta-card">
+      <div class="eyebrow">That was Day 1 of 7</div>
+      <h2>Day 2 is where your whole strategy comes apart.</h2>
+      <p>The coffee experiment has a second half — and it changes everything. Days 2 through 7 include your coaching sessions, field practice, and the before-and-after that proves it worked.</p>
+      <div class="price">$9.00 <s>$19.00</s> · launch price</div>
+      <a class="cta-btn" href="the-likeability-lie.html">Start the full program</a>
+      <div class="fine">Instant access · Secure checkout via Polar · No account needed</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="copyright">© 2026 Why Humans Do That. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
