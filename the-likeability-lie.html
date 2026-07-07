@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Likeability Lie — Why Humans Do That · Volume 1</title>
-  <meta name="description" content="Everything you were taught about human connection is wrong. The psychology of why people like, remember, and feel close to you. Instant download, no account needed." />
+  <title>The Likeability Lie — A 7-day training program · Why Humans Do That</title>
+  <meta name="description" content="Not a book — a 7-day training program to stop performing and become more reachable. Daily reps, an AI coach, and before-and-after notes to prove it worked." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -12,28 +12,17 @@
 
   <style>
     :root {
-      --bg: #FAFAFA;
-      --surface: #FFFFFF;
-      --text: #1A1A1A;
-      --text-muted: #6B6B6B;
-      --border: #E8E8E8;
-      --black: #1A1A1A;
-      --max: 1080px;
+      --bg: #FAFAFA; --surface: #FFFFFF; --text: #1A1A1A; --text-muted: #6B6B6B;
+      --border: #E8E8E8; --black: #1A1A1A; --max: 1080px;
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; scroll-behavior: smooth; }
-    body {
-      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif;
-      background: var(--bg); color: var(--text); line-height: 1.6; letter-spacing: -0.01em;
-    }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; letter-spacing: -0.01em; }
     a { color: inherit; text-decoration: none; }
 
-    /* ---------- Header ---------- */
+    /* Header */
     header { border-bottom: 1px solid var(--border); background: var(--bg); }
-    .header-inner {
-      max-width: var(--max); margin: 0 auto; padding: 22px 24px;
-      display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px;
-    }
+    .header-inner { max-width: var(--max); margin: 0 auto; padding: 22px 24px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; }
     .nav-left { display: flex; gap: 28px; }
     .nav-left a { font-size: 14px; font-weight: 500; color: var(--text-muted); transition: color .15s; }
     .nav-left a:hover { color: var(--text); }
@@ -45,7 +34,7 @@
     .nav-right a:hover { color: var(--text); }
     .icon { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.6; }
 
-    /* ---------- Layout primitives ---------- */
+    /* Layout primitives */
     main { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
     .wrap { max-width: 680px; margin: 0 auto; }
     .section { padding: 56px 0; }
@@ -56,149 +45,87 @@
     p { font-size: 17px; color: #333; }
     p + p { margin-top: 14px; }
 
-    /* ---------- Hero ---------- */
-    .hero { display: grid; grid-template-columns: 0.8fr 1fr; gap: 56px; align-items: center; padding: 60px 0; }
-    .cover {
-      position: relative; aspect-ratio: 3/4; background: var(--surface);
-      border: 1px solid var(--border); border-radius: 14px; overflow: hidden;
-      display: flex; align-items: center; justify-content: center;
-    }
+    /* Hero */
+    .hero { display: grid; grid-template-columns: 0.85fr 1fr; gap: 56px; align-items: center; padding: 60px 0; }
+    .cover { position: relative; aspect-ratio: 2/3; background: #111; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
     .cover img { width: 100%; height: 100%; object-fit: cover; }
-    .cover-placeholder { text-align: center; padding: 26px; }
-    .cover-placeholder .ph-vol { font-size: 12px; letter-spacing: 0.18em; text-transform: uppercase; color: #9A9A9A; }
-    .cover-placeholder .ph-title { font-size: 34px; font-weight: 700; color: #1A1A1A; letter-spacing: -0.03em; line-height: 1.08; margin-top: 14px; }
-    .cover-placeholder .ph-sub { font-size: 12px; color: #BDBDBD; margin-top: 16px; }
-
     .hero-copy .eyebrow { display: block; margin-bottom: 14px; }
-    .hero-copy h1 { font-size: 46px; font-weight: 700; letter-spacing: -0.035em; line-height: 1.03; }
-    .hero-copy .sub { font-size: 19px; color: var(--text-muted); margin-top: 16px; line-height: 1.5; }
-    .hero-hook { margin-top: 22px; }
-    .hero-hook p { font-size: 16px; color: #333; }
+    .hero-copy h1 { font-size: 44px; font-weight: 700; letter-spacing: -0.035em; line-height: 1.04; }
+    .hero-copy .sub { font-size: 20px; color: var(--text); font-weight: 600; margin-top: 14px; }
+    .hero-hook { margin-top: 18px; }
+    .hero-hook p { font-size: 16px; color: var(--text-muted); }
 
-    /* ---------- Price / launch offer ---------- */
+    /* Offer */
     .offer { margin-top: 26px; }
     .price-row { display: flex; align-items: baseline; gap: 12px; }
     .price-row .now { font-size: 34px; font-weight: 700; letter-spacing: -0.02em; }
     .price-row .was { font-size: 18px; color: #B0B0B0; text-decoration: line-through; }
-    .launch-note {
-      font-size: 13px; color: var(--text); margin-top: 10px;
-      display: inline-flex; align-items: center; gap: 7px;
-      background: #F0F0F0; padding: 6px 12px; border-radius: 7px;
-    }
+    .launch-note { font-size: 13px; color: var(--text); margin-top: 10px; display: inline-flex; align-items: center; gap: 7px; background: #F0F0F0; padding: 6px 12px; border-radius: 7px; }
     .launch-note svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 1.7; }
     .launch-note strong { font-weight: 600; }
-
-    .buy {
-      display: block; width: 100%; text-align: center; background: var(--black); color: #fff;
-      font-size: 16px; font-weight: 600; padding: 17px; border-radius: 10px; margin-top: 20px;
-      transition: opacity .15s, transform .15s;
-    }
+    .buy { display: block; width: 100%; text-align: center; background: var(--black); color: #fff; font-size: 16px; font-weight: 600; padding: 17px; border-radius: 10px; margin-top: 20px; transition: opacity .15s, transform .15s; }
     .buy:hover { opacity: 0.88; transform: translateY(-1px); }
     .buy.secondary { background: transparent; color: var(--text); border: 1.5px solid var(--border); }
     .buy.secondary:hover { border-color: #1A1A1A; opacity: 1; }
     .reassure { font-size: 13px; color: var(--text-muted); text-align: center; margin-top: 12px; }
-
     .meta { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px 28px; }
     .meta div { font-size: 13px; }
     .meta .k { color: var(--text-muted); }
     .meta .v { font-weight: 600; margin-top: 1px; }
 
-    /* ---------- Big statement / loss aversion ---------- */
+    /* Statement / loss aversion */
     .stmt p { font-size: 20px; color: #1A1A1A; line-height: 1.7; }
     .stmt .soft { color: var(--text-muted); }
     .stmt .beats { font-weight: 600; }
 
-    /* ---------- Checklist ---------- */
-    .checklist { list-style: none; display: grid; gap: 16px; margin-top: 8px; }
+    /* Pillars */
+    .pillars { display: grid; grid-template-columns: repeat(4, 1fr); gap: 16px; margin-top: 26px; }
+    .pillar { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 22px 18px; }
+    .pillar svg { width: 24px; height: 24px; stroke: #1A1A1A; fill: none; stroke-width: 1.6; }
+    .pillar .p-label { font-size: 14px; font-weight: 700; letter-spacing: 0.04em; margin-top: 14px; }
+    .pillar .p-desc { font-size: 13px; color: var(--text-muted); margin-top: 6px; line-height: 1.5; }
+
+    /* Curriculum */
+    .days { list-style: none; margin-top: 22px; }
+    .days li { display: grid; grid-template-columns: 52px 1fr auto; gap: 16px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid var(--border); }
+    .days .d-num { font-size: 12px; font-weight: 600; letter-spacing: 0.1em; color: #B0B0B0; text-transform: uppercase; }
+    .days .d-title { font-size: 17px; font-weight: 600; }
+    .days .d-meta { font-size: 13px; color: var(--text-muted); white-space: nowrap; }
+
+    /* Coach / dark card */
+    .lab { background: #1A1A1A; border-radius: 14px; padding: 34px 36px; color: #fff; margin-top: 8px; }
+    .lab .eyebrow { color: #9A9A9A; }
+    .lab h2 { color: #fff; margin-top: 10px; }
+    .lab p { color: #C8C8C8; margin-top: 14px; }
+    .lab ul { list-style: none; display: grid; gap: 12px; margin-top: 22px; }
+    .lab li { display: flex; gap: 12px; font-size: 16px; color: #EDEDED; align-items: flex-start; }
+    .lab li svg { width: 19px; height: 19px; flex-shrink: 0; margin-top: 2px; stroke: #fff; fill: none; stroke-width: 1.7; }
+
+    /* Measure before/after */
+    .measure { display: grid; grid-template-columns: 1fr auto 1fr; gap: 20px; align-items: center; margin-top: 24px; }
+    .measure .cell { padding: 24px; border-radius: 12px; }
+    .measure .d0 { background: #F4F4F4; }
+    .measure .d7 { background: #1A1A1A; }
+    .measure .k { font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: #9A9A9A; }
+    .measure .v { font-size: 17px; font-weight: 600; margin-top: 8px; line-height: 1.45; }
+    .measure .d0 .v { color: #6B6B6B; }
+    .measure .d7 .v { color: #fff; }
+    .measure .arrow { color: #B0B0B0; font-size: 22px; }
+
+    /* Checklist / studies / preview */
+    .checklist { list-style: none; display: grid; gap: 16px; margin-top: 22px; }
     .checklist li { display: flex; gap: 14px; font-size: 17px; color: #1A1A1A; }
     .checklist svg { width: 21px; height: 21px; flex-shrink: 0; margin-top: 3px; stroke: #1A1A1A; fill: none; stroke-width: 1.7; }
-
-    /* ---------- Study list ---------- */
     .studies { list-style: none; display: grid; gap: 12px; margin-top: 20px; }
     .studies li { font-size: 16px; color: #333; padding-left: 20px; position: relative; }
     .studies li:before { content: "—"; position: absolute; left: 0; color: #B0B0B0; }
-
-    /* ---------- Quote-ish recognition list ---------- */
-    .recog { list-style: none; display: grid; gap: 14px; margin-top: 22px; }
-    .recog li {
-      font-size: 18px; color: #1A1A1A; font-style: italic;
-      padding: 16px 20px; background: var(--surface); border: 1px solid var(--border); border-radius: 10px;
-    }
-
-    /* ---------- Preview / free chapter ---------- */
-    .freebox {
-      background: var(--surface); border: 1px solid var(--border); border-radius: 14px;
-      padding: 34px 36px; text-align: center;
-    }
-    .freebox h2 { font-size: 24px; }
-    .freebox p { max-width: 460px; margin: 12px auto 0; color: var(--text-muted); }
-    .freebox .buy { max-width: 320px; margin: 22px auto 0; }
-
-    /* ---------- Difference ---------- */
-    .diff { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 26px; }
-    .diff .col { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 26px; }
-    .diff .col .tag { font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); }
-    .diff .col .big { font-size: 18px; font-weight: 600; margin-top: 10px; line-height: 1.4; }
-    .diff .col.hl { background: #1A1A1A; border-color: #1A1A1A; }
-    .diff .col.hl .tag { color: #9A9A9A; }
-    .diff .col.hl .big { color: #fff; }
-
-    /* ---------- Before / After ---------- */
-    .ba { display: grid; grid-template-columns: 1fr auto 1fr; gap: 20px; align-items: center; margin-top: 24px; }
-    .ba .cell { padding: 22px; border-radius: 12px; }
-    .ba .before { background: #F4F4F4; }
-    .ba .after { background: #1A1A1A; }
-    .ba .k { font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; }
-    .ba .before .k { color: #9A9A9A; }
-    .ba .after .k { color: #9A9A9A; }
-    .ba .v { font-size: 18px; font-weight: 600; margin-top: 8px; line-height: 1.4; }
-    .ba .before .v { color: #6B6B6B; }
-    .ba .after .v { color: #fff; }
-    .ba .arrow { color: #B0B0B0; font-size: 22px; }
-
-    /* ---------- Series (light, single volume) ---------- */
-    .series-line { display: flex; align-items: center; gap: 16px; margin-top: 20px; }
-    .series-line .badge-vol { font-size: 13px; font-weight: 600; background: #1A1A1A; color: #fff; padding: 6px 12px; border-radius: 7px; white-space: nowrap; }
-    .series-line p { margin: 0; color: var(--text-muted); font-size: 16px; }
-
-    /* ---------- FAQ ---------- */
-    .faq details { border-bottom: 1px solid var(--border); padding: 18px 0; }
-    .faq summary { font-size: 17px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
-    .faq summary::-webkit-details-marker { display: none; }
-    .faq summary:after { content: "+"; font-size: 22px; font-weight: 400; color: var(--text-muted); }
-    .faq details[open] summary:after { content: "\2013"; }
-    .faq p { font-size: 15px; color: var(--text-muted); margin-top: 12px; }
-
-    /* ---------- Final CTA ---------- */
-    .final { text-align: center; padding: 64px 0; }
-    .final h2 { font-size: 30px; }
-    .final .stmt { max-width: 520px; margin: 16px auto 0; }
-    .final .stmt p { font-size: 18px; }
-    .final .price-row { justify-content: center; margin-top: 26px; }
-    .final .buy { max-width: 340px; margin: 18px auto 0; }
-    .final .launch-note { margin-top: 14px; }
-
-    /* ---------- Excerpt preview ---------- */
+    .studies li strong { font-weight: 600; }
     .preview { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 34px 36px; position: relative; margin-top: 8px; }
     .preview .preview-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.14em; color: #9A9A9A; margin-bottom: 16px; }
     .preview p { font-size: 17px; line-height: 1.8; }
     .preview .fade { position: absolute; left: 0; right: 0; bottom: 0; height: 110px; background: linear-gradient(to bottom, rgba(255,255,255,0), var(--surface)); border-radius: 0 0 14px 14px; }
 
-    /* ---------- Table of contents ---------- */
-    .toc { list-style: none; counter-reset: ch; }
-    .toc li { counter-increment: ch; display: flex; align-items: baseline; gap: 16px; padding: 15px 0; border-bottom: 1px solid var(--border); font-size: 17px; }
-    .toc li:before { content: counter(ch, decimal-leading-zero); font-size: 13px; font-weight: 600; color: #B0B0B0; min-width: 26px; }
-
-    /* ---------- "A book you use" lab card ---------- */
-    .lab { background: #1A1A1A; border-radius: 14px; padding: 34px 36px; color: #fff; margin-top: 8px; }
-    .lab .eyebrow { color: #9A9A9A; }
-    .lab h2 { color: #fff; margin-top: 10px; }
-    .lab p { color: #C8C8C8; margin-top: 12px; }
-    .lab ul { list-style: none; display: grid; gap: 12px; margin-top: 22px; }
-    .lab li { display: flex; gap: 12px; font-size: 16px; color: #EDEDED; align-items: flex-start; }
-    .lab li svg { width: 19px; height: 19px; flex-shrink: 0; margin-top: 2px; stroke: #fff; fill: none; stroke-width: 1.7; }
-
-    /* ---------- What changed table ---------- */
+    /* What changed table */
     .changed { width: 100%; border-collapse: collapse; margin-top: 24px; }
     .changed th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 600; text-align: left; padding: 0 0 12px; }
     .changed td { font-size: 16px; padding: 13px 0; border-top: 1px solid var(--border); }
@@ -206,7 +133,40 @@
     .changed td.new { color: #1A1A1A; font-weight: 500; }
     .changed .col-arrow { color: #B0B0B0; width: 40px; text-align: center; }
 
-    /* ---------- Footer ---------- */
+    /* Sessions */
+    .sessions { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 24px; }
+    .sess { border: 1px solid var(--border); border-radius: 14px; padding: 26px; }
+    .sess .s-num { font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); }
+    .sess .s-title { font-size: 20px; font-weight: 700; margin-top: 8px; letter-spacing: -0.02em; }
+    .sess .s-desc { font-size: 15px; color: var(--text-muted); margin-top: 10px; }
+    .sess.active { background: #1A1A1A; border-color: #1A1A1A; }
+    .sess.active .s-num { color: #9A9A9A; }
+    .sess.active .s-title { color: #fff; }
+    .sess.active .s-desc { color: #C8C8C8; }
+    .sess .s-status { font-size: 12px; font-weight: 600; margin-top: 16px; display: inline-block; }
+    .sess.active .s-status { color: #fff; }
+    .sess.soon { background: #F7F7F7; border-style: dashed; }
+    .sess.soon .s-status { color: var(--text-muted); }
+
+    /* FAQ */
+    .faq details { border-bottom: 1px solid var(--border); padding: 18px 0; }
+    .faq summary { font-size: 17px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary:after { content: "+"; font-size: 22px; font-weight: 400; color: var(--text-muted); }
+    .faq details[open] summary:after { content: "\2013"; }
+    .faq p { font-size: 15px; color: var(--text-muted); margin-top: 12px; }
+
+    /* Final */
+    .final { text-align: center; padding: 64px 0; }
+    .final h2 { font-size: 30px; }
+    .final .stmt { max-width: 540px; margin: 16px auto 0; }
+    .final .stmt p { font-size: 18px; }
+    .final .signature { font-size: 21px; font-weight: 600; color: #1A1A1A; max-width: 520px; margin: 24px auto 0; }
+    .final .price-row { justify-content: center; margin-top: 24px; }
+    .final .buy { max-width: 340px; margin: 18px auto 0; }
+    .final .launch-note { margin-top: 14px; }
+
+    /* Footer */
     footer { border-top: 1px solid var(--border); }
     .footer-inner { max-width: var(--max); margin: 0 auto; padding: 40px 24px; text-align: center; }
     .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 24px; font-size: 13px; color: var(--text-muted); margin-bottom: 18px; }
@@ -217,12 +177,15 @@
       .header-inner { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 14px; }
       .nav-right { justify-content: center; }
       .hero { grid-template-columns: 1fr; gap: 30px; padding: 36px 0; }
-      .cover { max-width: 280px; margin: 0 auto; }
-      .hero-copy h1 { font-size: 36px; }
+      .cover { max-width: 260px; margin: 0 auto; }
+      .hero-copy h1 { font-size: 34px; }
       h2 { font-size: 23px; }
-      .diff { grid-template-columns: 1fr; }
-      .ba { grid-template-columns: 1fr; }
-      .ba .arrow { transform: rotate(90deg); }
+      .pillars { grid-template-columns: 1fr 1fr; }
+      .measure { grid-template-columns: 1fr; }
+      .measure .arrow { transform: rotate(90deg); }
+      .sessions { grid-template-columns: 1fr; }
+      .days li { grid-template-columns: 44px 1fr; }
+      .days .d-meta { grid-column: 2; }
     }
   </style>
 </head>
@@ -237,7 +200,7 @@
       </nav>
       <div class="brand">
         <div class="brand-name">Why Humans Do That</div>
-        <div class="brand-tag">Psychology, in short reads</div>
+        <div class="brand-tag">Psychology you can train</div>
       </div>
       <div class="nav-right">
         <a href="https://www.youtube.com/@whyhumansdo-that" aria-label="YouTube"><svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
@@ -253,26 +216,25 @@
     <section class="hero">
       <div class="cover">
         <picture>
-          <source type="image/webp" srcset="vo1.webp" />
-          <img src="vo1.jpg" alt="The Likeability Lie — Volume 1" />
+          <source type="image/webp" srcset="cover.webp" />
+          <img src="cover.jpg" alt="The Likeability Lie — a 7-day training program" />
         </picture>
       </div>
 
       <div class="hero-copy">
-        <span class="eyebrow">Volume 1 · The psychology of connection</span>
+        <span class="eyebrow">Session 1 · A 7-day training program</span>
         <h1>The Likeability Lie</h1>
-        <p class="sub">Everything you were taught about human connection is wrong.</p>
+        <p class="sub">Stop performing. Start connecting.</p>
 
         <div class="hero-hook">
-          <p>For years you've been told the same advice. Smile more. Talk more. Be more confident. Be more interesting.</p>
-          <p>None of it explains why the people who try hardest to be liked often feel the most invisible. This book reveals why.</p>
+          <p>This isn't a book you read. It's a 7-day program that trains how you connect with people — with daily reps in your real conversations, an AI coach, and before-and-after notes to prove it changed something.</p>
         </div>
 
         <!-- ===== LAUNCH OFFER (edit price + date here) ===== -->
         <div class="offer">
           <div class="price-row">
-            <span class="now">$4.99</span>
-            <span class="was">$12.00</span>
+            <span class="now">$9.00</span>
+            <span class="was">$19.00</span>
           </div>
           <div class="launch-note">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
@@ -280,13 +242,13 @@
           </div>
 
           <!-- Replace href with your Polar checkout link -->
-          <a class="buy" href="https://buy.polar.sh/REPLACE_WITH_YOUR_LINK">Get instant access</a>
+          <a class="buy" href="https://buy.polar.sh/REPLACE_WITH_YOUR_LINK">Start Day 1 — instant access</a>
           <p class="reassure">Secure checkout via Polar · No account needed</p>
         </div>
 
         <div class="meta">
-          <div><div class="k">Reading time</div><div class="v">One sitting</div></div>
-          <div><div class="k">Format</div><div class="v">PDF + EPUB</div></div>
+          <div><div class="k">Duration</div><div class="v">7 days</div></div>
+          <div><div class="k">Each day</div><div class="v">15–25 min</div></div>
           <div><div class="k">Delivery</div><div class="v">Instant download</div></div>
         </div>
       </div>
@@ -299,40 +261,102 @@
         <h2 style="margin-top:12px;">Every day you believe the wrong rule…</h2>
         <p style="margin-top:18px;">…you keep repeating the same conversations. Trying harder. Explaining more. Being nicer. Giving more.</p>
         <p>Only to leave wondering why people still overlook you.</p>
-        <p class="beats" style="margin-top:24px;">You don't need another communication trick.</p>
-        <p class="soft">You need to understand the psychology that has been shaping every interaction you've ever had.</p>
+        <p class="beats" style="margin-top:24px;">You don't need another communication tip.</p>
+        <p class="soft">You need to train one specific pattern — how you perform, where you hide, and what changes when you let yourself be a little more reachable.</p>
       </div>
     </section>
 
-    <!-- ============ WHAT YOU'LL DISCOVER ============ -->
+    <!-- ============ HOW IT WORKS — 4 PILLARS ============ -->
     <section class="section">
       <div class="wrap">
-        <div class="eyebrow">What you'll discover</div>
-        <h2 style="margin-top:12px;">The rules no one told you about</h2>
-        <ul class="checklist" style="margin-top:26px;">
-          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>Why trying to be liked actually pushes people away</li>
-          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>The psychological mistake almost everyone makes in relationships</li>
-          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>Why flawless people are admired — but rarely loved</li>
-          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>The hidden reason vulnerability creates connection</li>
-          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>The science behind becoming unforgettable</li>
-          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>The simple shift that changes every conversation you'll ever have</li>
+        <div class="eyebrow">How the program works</div>
+        <h2 style="margin-top:12px;">Four moves, every day</h2>
+        <p class="lead">Like a personal trainer — except the muscle you're training is how you connect with people.</p>
+        <div class="pillars">
+          <div class="pillar">
+            <svg viewBox="0 0 24 24"><path d="M4 5h7v15H6a2 2 0 0 1-2-2z"/><path d="M20 5h-7v15h5a2 2 0 0 0 2-2z"/></svg>
+            <div class="p-label">READ</div>
+            <div class="p-desc">Powerful stories and the science behind them.</div>
+          </div>
+          <div class="pillar">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
+            <div class="p-label">TRAIN</div>
+            <div class="p-desc">Small real-world reps in your actual conversations.</div>
+          </div>
+          <div class="pillar">
+            <svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/></svg>
+            <div class="p-label">COACH</div>
+            <div class="p-desc">Guided AI coaching sessions with The Observer.</div>
+          </div>
+          <div class="pillar">
+            <svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M8.5 11l1.5 1.5L14 9M8.5 16l1.5 1.5L14 14"/></svg>
+            <div class="p-label">TRACK</div>
+            <div class="p-desc">Daily notes — your own before and after.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ 7-DAY CURRICULUM ============ -->
+    <section class="section">
+      <div class="wrap">
+        <div class="eyebrow">Your seven days</div>
+        <h2 style="margin-top:12px;">What you'll do, day by day</h2>
+        <ul class="days">
+          <li><span class="d-num">Day 1</span><span class="d-title">Catch the Performance</span><span class="d-meta">Read + observe · 18 min</span></li>
+          <li><span class="d-num">Day 2</span><span class="d-title">The Verdict</span><span class="d-meta">Reading · 20 min</span></li>
+          <li><span class="d-num">Day 3</span><span class="d-title">Rehearse the Truth</span><span class="d-meta">Coaching · 25 min</span></li>
+          <li><span class="d-num">Day 4</span><span class="d-title">Open One Door</span><span class="d-meta">Field practice · 15 min</span></li>
+          <li><span class="d-num">Day 5</span><span class="d-title">Go One Step Bolder</span><span class="d-meta">Field practice · 15 min</span></li>
+          <li><span class="d-num">Day 6</span><span class="d-title">Build Your Own Drill</span><span class="d-meta">Coaching · 25 min</span></li>
+          <li><span class="d-num">Day 7</span><span class="d-title">Measure the Change</span><span class="d-meta">Review · 15 min</span></li>
         </ul>
       </div>
     </section>
 
-    <!-- ============ THIS ISN'T SELF-HELP ============ -->
+    <!-- ============ AI COACH ============ -->
+    <section class="section">
+      <div class="wrap">
+        <div class="lab">
+          <div class="eyebrow">Your coach</div>
+          <h2 style="margin-top:10px;">Meet The Observer</h2>
+          <p>A trainer who only talks is just a podcast. The Observer interrupts — at the exact moments you'd rather keep reading — and asks the questions a good coach would ask.</p>
+          <ul>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>On Days 3 and 6, it becomes an interactive coaching session</li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>Runs with ChatGPT or Claude — whichever you already use</li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>No technical skill needed — you just talk</li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>No AI? A full notebook version is built in</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ BEFORE / AFTER PROOF ============ -->
+    <section class="section">
+      <div class="wrap">
+        <div class="eyebrow">Proof you can see</div>
+        <h2 style="margin-top:12px;">You'll measure the change yourself</h2>
+        <p class="lead">Every trainer starts with a measurement. On Day 0 you take a baseline. On Day 7 you take it again — and read the difference with your own eyes, not our word for it.</p>
+        <div class="measure">
+          <div class="cell d0"><div class="k">Day 0</div><div class="v">A snapshot of where your wall stands today.</div></div>
+          <div class="arrow">→</div>
+          <div class="cell d7"><div class="k">Day 7</div><div class="v">Before-and-after notes that prove something moved.</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCIENCE ============ -->
     <section class="section">
       <div class="wrap">
         <div class="eyebrow">Grounded in real research</div>
         <h2 style="margin-top:12px;">This isn't self-help. It's psychology.</h2>
-        <p style="margin-top:16px;">Inside you'll find the real studies behind human connection — not motivational advice.</p>
+        <p style="margin-top:16px;">The program uses four well-known studies as training lenses — ways to test small behaviors and compare your fear with the evidence.</p>
         <ul class="studies">
-          <li>The Pratfall Effect</li>
-          <li>Elliot Aronson's famous experiment</li>
-          <li>The 36 Questions that created closeness between strangers</li>
-          <li>Why your brain decides whether it likes someone before you even speak</li>
+          <li><strong>Aronson, 1966</strong> — the pratfall effect: why a competent person's small mistake can make them more likable</li>
+          <li><strong>Aron, 1997</strong> — how strangers became close in 45 minutes through gradual, honest disclosure</li>
+          <li><strong>Bruk, 2018</strong> — the "beautiful mess effect": you judge your own vulnerability far more harshly than others do</li>
+          <li><strong>Boothby, 2018</strong> — the "liking gap": people underestimate how much others actually like them</li>
         </ul>
-        <p style="margin-top:18px; color:var(--text-muted);">This is how people actually work.</p>
       </div>
     </section>
 
@@ -342,7 +366,7 @@
         <div class="eyebrow">A look inside</div>
         <h2 style="margin-top:12px;">Read a sample</h2>
         <div class="preview">
-          <div class="preview-label">From Chapter 1 — People don't like you</div>
+          <div class="preview-label">From Day 1 — The lie you've been told</div>
           <p>Somewhere along the way, you were handed a question and told it was the right one to ask. <em>How do I get people to like me?</em></p>
           <p>It seems harmless. Reasonable, even. And every answer the world gave you pointed in the same direction. Smile more. Talk more. Be helpful. Be agreeable. Say yes.</p>
           <p>None of it is wrong, exactly. But all of it rests on one quiet assumption you've never stopped to question — that people like you because of what you <em>do</em>.</p>
@@ -353,99 +377,27 @@
       </div>
     </section>
 
-    <!-- ============ INSIDE THE BOOK ============ -->
+    <!-- ============ WHO IT'S FOR — BASELINE ============ -->
     <section class="section">
       <div class="wrap">
-        <div class="eyebrow">Inside the book</div>
-        <h2 style="margin-top:12px;">How it unfolds</h2>
-        <ol class="toc" style="margin-top:20px;">
-          <li>The lie you've been told</li>
-          <li>Why your brain gets it wrong</li>
-          <li>The invisible rule</li>
-          <li>What actually makes people like you</li>
-          <li>The challenge</li>
-        </ol>
-        <p style="margin-top:16px; color:var(--text-muted); font-size:15px;">Plus: <em>When this doesn't work</em>, the Practice Lab, and a 7-day follow-up.</p>
-      </div>
-    </section>
-
-    <!-- ============ A BOOK YOU USE ============ -->
-    <section class="section">
-      <div class="wrap">
-        <div class="lab">
-          <div class="eyebrow">Not a book you read. A book you use.</div>
-          <h2 style="margin-top:10px;">Every idea comes with a Practice Lab</h2>
-          <p>Reading the idea is easy. Living it is the part that changes things. So the book ends with a short, guided workshop that turns insight into action.</p>
-          <ul>
-            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>A quick self-check to spot your own "wall"</li>
-            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>A one-line journal that drags the pattern into the light</li>
-            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>A 7-day experiment small enough that you'll actually do it</li>
-            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>Real scripts — exactly what "one honest sentence" sounds like</li>
-            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>Optional AI-guided prompts for ChatGPT or Claude</li>
-          </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ WHO THIS IS FOR ============ -->
-    <section class="section">
-      <div class="wrap">
-        <div class="eyebrow">Who this is for</div>
-        <h2 style="margin-top:12px;">If you've ever thought…</h2>
-        <ul class="recog">
-          <li>"I always give more than I get."</li>
-          <li>"People forget me."</li>
-          <li>"I try so hard to make a good impression."</li>
-          <li>"I don't know why conversations never become real."</li>
+        <div class="eyebrow">Your baseline</div>
+        <h2 style="margin-top:12px;">Does this sound like you?</h2>
+        <ul class="checklist">
+          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>I say yes when I actually want to say no.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>I apologize even when nothing is my fault.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>I stay quiet rather than disagree.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>I hide what I really think to keep things smooth.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>I become a slightly different person around people I want to impress.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>I'd rather seem fine than admit I'm struggling.</li>
         </ul>
-        <p style="margin-top:22px; font-weight:600; color:#1A1A1A;">Then this book was written for you.</p>
+        <p style="margin-top:22px; font-weight:600; color:#1A1A1A;">If you marked even one, this program was built for you.</p>
       </div>
     </section>
 
-    <!-- ============ SOCIAL PROOF ============ -->
-    <section class="section">
-      <div class="wrap" style="text-align:center;">
-        <p style="font-size:21px; font-weight:600; color:#1A1A1A;">Based on the psychology series watched by thousands of people.</p>
-        <p style="margin-top:14px; color:var(--text-muted);">The ideas in this book have already helped readers rethink how relationships actually work — now collected into one complete guide you can read in a single sitting.</p>
-      </div>
-    </section>
-
-    <!-- ============ FREE FIRST CHAPTER (reciprocity + endowment) ============ -->
+    <!-- ============ WHAT CHANGES ============ -->
     <section class="section">
       <div class="wrap">
-        <div class="freebox">
-          <div class="eyebrow">Try before you buy</div>
-          <h2 style="margin-top:10px;">Read the first chapter free</h2>
-          <p>Don't buy it because of this page. Read the first chapter. See if it changes the way you think. If it doesn't — don't buy the book.</p>
-          <!-- Replace href with your free-chapter link (PDF or a /chapter-1 page) -->
-          <a class="buy secondary" href="#REPLACE_WITH_FREE_CHAPTER_LINK">Read chapter one free</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ WHAT MAKES THIS DIFFERENT ============ -->
-    <section class="section">
-      <div class="wrap">
-        <div class="eyebrow">The wall and the door</div>
-        <h2 style="margin-top:12px;">You built a wall and called it a bridge</h2>
-        <div class="diff">
-          <div class="col">
-            <div class="tag">The wall</div>
-            <div class="big">Being impressive, agreeable, flawless. Everything you do to look better — and it quietly keeps people out.</div>
-          </div>
-          <div class="col hl">
-            <div class="tag">The door</div>
-            <div class="big">Letting one true thing show. The stumble, the honest admission — the exact place another person can finally reach you.</div>
-          </div>
-        </div>
-        <p style="margin-top:22px; color:var(--text-muted);">Once you see it, you'll never look at people the same way again.</p>
-      </div>
-    </section>
-
-    <!-- ============ WHAT CHANGED ============ -->
-    <section class="section">
-      <div class="wrap">
-        <div class="eyebrow">What changes after you read it</div>
+        <div class="eyebrow">What changes by Day 7</div>
         <h2 style="margin-top:12px;">The whole shift, side by side</h2>
         <table class="changed">
           <thead>
@@ -455,20 +407,32 @@
             <tr><td class="old">Trying to impress</td><td class="col-arrow">→</td><td class="new">Trying to connect</td></tr>
             <tr><td class="old">Performing</td><td class="col-arrow">→</td><td class="new">Revealing</td></tr>
             <tr><td class="old">Looking perfect</td><td class="col-arrow">→</td><td class="new">Being reachable</td></tr>
-            <tr><td class="old">Chasing approval</td><td class="col-arrow">→</td><td class="new">Creating recognition</td></tr>
+            <tr><td class="old">Chasing approval</td><td class="col-arrow">→</td><td class="new">Being truly known</td></tr>
             <tr><td class="old">Hiding the real you</td><td class="col-arrow">→</td><td class="new">Letting yourself be seen</td></tr>
           </tbody>
         </table>
       </div>
     </section>
 
-    <!-- ============ SERIES (Volume 1) ============ -->
+    <!-- ============ SESSIONS ============ -->
     <section class="section">
       <div class="wrap">
-        <div class="eyebrow">The collection</div>
-        <div class="series-line">
-          <span class="badge-vol">Volume 1</span>
-          <p>The first release in an ongoing psychology series. More volumes coming soon.</p>
+        <div class="eyebrow">The program</div>
+        <h2 style="margin-top:12px;">Session 1 of an ongoing series</h2>
+        <p class="lead">Each session trains one layer of how people connect. Start with the first — the rest are on the way.</p>
+        <div class="sessions">
+          <div class="sess active">
+            <div class="s-num">Session 1</div>
+            <div class="s-title">The Wall</div>
+            <div class="s-desc">Learn to open the door — one true sentence, one breath, one crack of light.</div>
+            <div class="s-status">Available now</div>
+          </div>
+          <div class="sess soon">
+            <div class="s-num">Session 2</div>
+            <div class="s-title">The Door</div>
+            <div class="s-desc">What to do when your honesty is met — how to go deeper without oversharing.</div>
+            <div class="s-status">Coming soon</div>
+          </div>
         </div>
       </div>
     </section>
@@ -480,28 +444,24 @@
         <h2 style="margin-top:12px;">Good to know</h2>
         <div style="margin-top:20px;">
           <details open>
-            <summary>Is this another communication book?</summary>
-            <p>No. It's a psychology book about why people decide they like — or don't like — someone before most conversations even begin.</p>
+            <summary>Is this a book?</summary>
+            <p>No. It's a 7-day training program — daily reading, real-world practice, and two guided coaching sessions. You don't read it in one sitting; you run it over a week.</p>
           </details>
           <details>
-            <summary>Is this based on science?</summary>
-            <p>Yes. It explains well-known psychological studies and shows how they apply to everyday relationships, rather than relying on motivational advice.</p>
+            <summary>How much time does it take?</summary>
+            <p>15–25 minutes a day for 7 days. Some days you read, some days you practice in real conversations, some days you work with the coach.</p>
           </details>
           <details>
-            <summary>How long is it?</summary>
-            <p>Designed to be read in one sitting, while giving you practical insights you can apply immediately.</p>
+            <summary>Do I need ChatGPT or Claude?</summary>
+            <p>The coaching sessions work best with a free AI assistant, but a complete notebook version is built in. No technical skill needed either way.</p>
           </details>
           <details>
-            <summary>Are there exercises, or is it just reading?</summary>
-            <p>Both. The chapter ends with a Practice Lab — a quick self-check, a one-line journal, a 7-day experiment, and optional AI-guided prompts — so the ideas actually change how you show up, not just what you know.</p>
+            <summary>Is this therapy?</summary>
+            <p>No. It's educational and self-guided — not therapy or a substitute for professional mental health support. If heavier things surface, the program says so and points you to better tools.</p>
           </details>
           <details>
-            <summary>What format will I receive?</summary>
-            <p>Instant digital download in PDF and EPUB. Works on your phone, tablet, Kindle, or computer.</p>
-          </details>
-          <details>
-            <summary>How do I get it after paying?</summary>
-            <p>The download appears right after checkout and is emailed to you automatically. No account required.</p>
+            <summary>What format is it, and how do I get it?</summary>
+            <p>Instant digital download (PDF), readable on phone, tablet, or computer. The download appears right after checkout and is emailed to you automatically — no account required.</p>
           </details>
         </div>
       </div>
@@ -509,22 +469,22 @@
 
   </main>
 
-  <!-- ============ FINAL CTA (loss aversion) ============ -->
+  <!-- ============ FINAL CTA ============ -->
   <section class="final">
     <div class="wrap">
-      <h2>You'll have another conversation tomorrow.</h2>
+      <h2>Seven days from now, you'll have proof.</h2>
       <div class="stmt">
-        <p>Another meeting. Another first impression. You'll either keep following the rule that never worked — or finally understand why.</p>
+        <p>Not another thing you read and forgot — a before-and-after in your own handwriting, from your own life.</p>
       </div>
-      <p style="font-size:21px; font-weight:600; color:#1A1A1A; max-width:520px; margin:24px auto 0;">Don't try to be liked. Try to be reachable.</p>
+      <p class="signature">Don't try to be liked. Try to be reachable.</p>
       <div class="price-row">
-        <span class="now">$4.99</span>
-        <span class="was">$12.00</span>
+        <span class="now">$9.00</span>
+        <span class="was">$19.00</span>
       </div>
-      <a class="buy" href="https://buy.polar.sh/REPLACE_WITH_YOUR_LINK">Get instant access</a>
+      <a class="buy" href="https://buy.polar.sh/REPLACE_WITH_YOUR_LINK">Start Day 1 — instant access</a>
       <div class="launch-note" style="display:inline-flex;">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
-        <span><strong>Launch price ends July 14, 2026.</strong> After that, it returns to $12.</span>
+        <span><strong>Launch price ends July 14, 2026.</strong> After that, it returns to $19.</span>
       </div>
     </div>
   </section>
