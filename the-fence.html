@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Likeability Lie — A 7-day training program · Why Humans Do That</title>
-  <meta name="description" content="Not a book — a 7-day training program to stop performing and become more reachable. Daily reps, an AI coach, and before-and-after notes to prove it worked." />
+  <title>The Fence — A 7-day training program · Why Humans Do That</title>
+  <meta name="description" content="Not a book — a 7-day training program to get your yes back and protect what matters without closing yourself off. Daily reps, an AI coach, and before-and-after notes." />
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,7 +22,7 @@
   <meta property="og:image" content="https://whyhumansdothat.com/thumb.jpg" />
   <meta property="og:image:width" content="1248" />
   <meta property="og:image:height" content="832" />
-  <meta property="og:url" content="https://whyhumansdothat.com/the-likeability-lie.html" />
+  <meta property="og:url" content="https://whyhumansdothat.com/the-fence.html" />
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:title" content="WHY HUMANS DO THAT" />
   <meta name="twitter:description" content="Connection Coaching Based on Psychology" />
@@ -86,6 +86,7 @@
     .buy.secondary { background: transparent; color: var(--text); border: 1.5px solid var(--border); }
     .buy.secondary:hover { border-color: #1A1A1A; opacity: 1; }
     .reassure { font-size: 13px; color: var(--text-muted); text-align: center; margin-top: 12px; }
+    .reassure a { color: inherit; text-decoration: underline; }
     .meta { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px 28px; }
     .meta div { font-size: 13px; }
     .meta .k { color: var(--text-muted); }
@@ -119,6 +120,19 @@
     .lab li { display: flex; gap: 12px; font-size: 16px; color: #EDEDED; align-items: flex-start; }
     .lab li svg { width: 19px; height: 19px; flex-shrink: 0; margin-top: 2px; stroke: #fff; fill: none; stroke-width: 1.7; }
 
+    /* Quadrant (Fiske) */
+    .quad-axes { font-size: 12px; color: var(--text-muted); margin-top: 20px; text-transform: uppercase; letter-spacing: 0.1em; }
+    .quadrant { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin-top: 12px; }
+    .q { border: 1px solid var(--border); border-radius: 12px; padding: 20px; background: var(--surface); }
+    .q .q-emotion { font-size: 17px; font-weight: 700; letter-spacing: -0.01em; }
+    .q .q-axis { font-size: 12px; color: var(--text-muted); margin-top: 4px; text-transform: uppercase; letter-spacing: 0.08em; }
+    .q .q-desc { font-size: 14px; color: #444; margin-top: 10px; line-height: 1.5; }
+    .q.pity { background: #1A1A1A; border-color: #1A1A1A; }
+    .q.pity .q-emotion { color: #fff; }
+    .q.pity .q-axis { color: #9A9A9A; }
+    .q.pity .q-desc { color: #C8C8C8; }
+    .q .q-here { display: inline-block; font-size: 11px; font-weight: 600; letter-spacing: 0.06em; text-transform: uppercase; background: #fff; color: #1A1A1A; padding: 3px 8px; border-radius: 5px; margin-top: 12px; }
+
     /* Measure before/after */
     .measure { display: grid; grid-template-columns: 1fr auto 1fr; gap: 20px; align-items: center; margin-top: 24px; }
     .measure .cell { padding: 24px; border-radius: 12px; }
@@ -143,6 +157,15 @@
     .preview p { font-size: 17px; line-height: 1.8; }
     .preview .fade { position: absolute; left: 0; right: 0; bottom: 0; height: 110px; background: linear-gradient(to bottom, rgba(255,255,255,0), var(--surface)); border-radius: 0 0 14px 14px; }
 
+    /* Difference (wall vs fence) */
+    .diff { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; margin-top: 26px; }
+    .diff .col { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 26px; }
+    .diff .col .tag { font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); }
+    .diff .col .big { font-size: 18px; font-weight: 600; margin-top: 10px; line-height: 1.4; }
+    .diff .col.hl { background: #1A1A1A; border-color: #1A1A1A; }
+    .diff .col.hl .tag { color: #9A9A9A; }
+    .diff .col.hl .big { color: #fff; }
+
     /* What changed table */
     .changed { width: 100%; border-collapse: collapse; margin-top: 24px; }
     .changed th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 600; text-align: left; padding: 0 0 12px; }
@@ -152,17 +175,19 @@
     .changed .col-arrow { color: #B0B0B0; width: 40px; text-align: center; }
 
     /* Sessions */
-    .sessions { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin-top: 24px; }
-    .sess { border: 1px solid var(--border); border-radius: 14px; padding: 26px; }
+    .sessions { display: grid; grid-template-columns: repeat(3, 1fr); gap: 16px; margin-top: 24px; }
+    .sess { border: 1px solid var(--border); border-radius: 14px; padding: 24px; display: block; }
     .sess .s-num { font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-muted); }
-    .sess .s-title { font-size: 20px; font-weight: 700; margin-top: 8px; letter-spacing: -0.02em; }
-    .sess .s-desc { font-size: 15px; color: var(--text-muted); margin-top: 10px; }
+    .sess .s-title { font-size: 19px; font-weight: 700; margin-top: 8px; letter-spacing: -0.02em; }
+    .sess .s-desc { font-size: 14px; color: var(--text-muted); margin-top: 10px; }
+    .sess .s-status { font-size: 12px; font-weight: 600; margin-top: 14px; display: inline-block; }
     .sess.active { background: #1A1A1A; border-color: #1A1A1A; }
     .sess.active .s-num { color: #9A9A9A; }
     .sess.active .s-title { color: #fff; }
     .sess.active .s-desc { color: #C8C8C8; }
-    .sess .s-status { font-size: 12px; font-weight: 600; margin-top: 16px; display: inline-block; }
     .sess.active .s-status { color: #fff; }
+    .sess.done { background: var(--surface); }
+    .sess.done .s-status { color: #1A1A1A; }
     .sess.soon { background: #F7F7F7; border-style: dashed; }
     .sess.soon .s-status { color: var(--text-muted); }
 
@@ -173,13 +198,14 @@
     .faq summary:after { content: "+"; font-size: 22px; font-weight: 400; color: var(--text-muted); }
     .faq details[open] summary:after { content: "\2013"; }
     .faq p { font-size: 15px; color: var(--text-muted); margin-top: 12px; }
+    .faq a { color: inherit; text-decoration: underline; }
 
     /* Final */
     .final { text-align: center; padding: 64px 0; }
     .final h2 { font-size: 30px; }
     .final .stmt { max-width: 540px; margin: 16px auto 0; }
     .final .stmt p { font-size: 18px; }
-    .final .signature { font-size: 21px; font-weight: 600; color: #1A1A1A; max-width: 520px; margin: 24px auto 0; }
+    .final .signature { font-size: 21px; font-weight: 600; color: #1A1A1A; max-width: 540px; margin: 24px auto 0; }
     .final .price-row { justify-content: center; margin-top: 24px; }
     .final .buy { max-width: 340px; margin: 18px auto 0; }
     .final .launch-note { margin-top: 14px; }
@@ -201,6 +227,7 @@
       .pillars { grid-template-columns: 1fr 1fr; }
       .measure { grid-template-columns: 1fr; }
       .measure .arrow { transform: rotate(90deg); }
+      .diff { grid-template-columns: 1fr; }
       .sessions { grid-template-columns: 1fr; }
       .days li { grid-template-columns: 44px 1fr; }
       .days .d-meta { grid-column: 2; }
@@ -234,18 +261,18 @@
     <section class="hero">
       <div class="cover">
         <picture>
-          <source type="image/webp" srcset="cover.webp" />
-          <img src="cover.jpg" alt="The Likeability Lie — a 7-day training program" />
+          <source type="image/webp" srcset="fence.webp" />
+          <img src="fence.jpg" alt="The Fence — a 7-day training program" />
         </picture>
       </div>
 
       <div class="hero-copy">
-        <span class="eyebrow">Session 1 · A 7-day training program</span>
-        <h1>The Likeability Lie</h1>
-        <p class="sub">Stop performing. Start connecting.</p>
+        <span class="eyebrow">Session 2 · A 7-day training program</span>
+        <h1>The Fence</h1>
+        <p class="sub">Get your yes back. Build a fence, not a wall.</p>
 
         <div class="hero-hook">
-          <p>This isn't a book you read. It's a 7-day program that trains how you connect with people — with daily reps in your real conversations, an AI coach, and before-and-after notes to prove it changed something.</p>
+          <p>You're the reliable one. The easy one — the yes before you're even asked. You thought being easy would earn their respect. It's been quietly spending it. This 7-day program gets your word its weight back.</p>
         </div>
 
         <!-- ===== LAUNCH OFFER (edit price + date here) ===== -->
@@ -259,10 +286,9 @@
             <span><strong>Launch price</strong> — until July 14, 2026</span>
           </div>
 
-          <!-- Replace href with your Polar checkout link -->
-          <a class="buy" href="https://buy.polar.sh/polar_cl_0AiGAhcJLnjWbXIJk4UQ0WfdUyRlK14kel92Q2KLwma">Start Day 1 — instant access</a>
-          <a class="buy secondary" href="day-1.html" target="_blank" rel="noopener">Read Day 1 free — no signup</a>
-          <p class="reassure">Instant access · Secure checkout via Polar · No account needed<br/>Sales are generally final once downloaded — <a href="refund.html" style="color:inherit; text-decoration:underline;">if something's wrong, we'll make it right</a> within 7 days.</p>
+          <!-- Replace href with your Polar checkout link for THE FENCE -->
+          <a class="buy" href="https://buy.polar.sh/REPLACE_WITH_FENCE_LINK">Start Day 1 — instant access</a>
+          <p class="reassure">Instant access · Secure checkout via Polar · No account needed<br/>Sales are generally final once downloaded — <a href="refund.html">if something's wrong, we'll make it right</a> within 7 days.</p>
         </div>
 
         <div class="meta">
@@ -276,12 +302,12 @@
     <!-- ============ LOSS AVERSION ============ -->
     <section class="section stmt">
       <div class="wrap">
-        <div class="eyebrow">The cost of the wrong rule</div>
-        <h2 style="margin-top:12px;">Every day you believe the wrong rule…</h2>
-        <p style="margin-top:18px;">…you keep repeating the same conversations. Trying harder. Explaining more. Being nicer. Giving more.</p>
-        <p>Only to leave wondering why people still overlook you.</p>
-        <p class="beats" style="margin-top:24px;">You don't need another communication tip.</p>
-        <p class="soft">You need to train one specific pattern — how you perform, where you hide, and what changes when you let yourself be a little more reachable.</p>
+        <div class="eyebrow">The tax you never agreed to</div>
+        <h2 style="margin-top:12px;">You made a quiet deal: I'll be easy, and you'll value me.</h2>
+        <p style="margin-top:18px;">So you paid. The extra task you never asked why was yours. The "no worries" to the third last-minute change. The jab you laughed off. The 10 p.m. reply because leaving it felt rude.</p>
+        <p>And the question you've been avoiding for years: has the other side of the deal ever paid out?</p>
+        <p class="beats" style="margin-top:24px;">The easier you became, the less your yes was worth.</p>
+        <p class="soft">It isn't because people are cruel. It's a pattern psychology mapped decades ago — and you can train your way out of it in a week.</p>
       </div>
     </section>
 
@@ -290,7 +316,7 @@
       <div class="wrap">
         <div class="eyebrow">How the program works</div>
         <h2 style="margin-top:12px;">Four moves, every day</h2>
-        <p class="lead">Like a personal trainer — except the muscle you're training is how you connect with people.</p>
+        <p class="lead">Like a personal trainer — except the muscle is harder this time: protecting what matters without becoming someone people can't reach.</p>
         <div class="pillars">
           <div class="pillar">
             <svg viewBox="0 0 24 24"><path d="M4 5h7v15H6a2 2 0 0 1-2-2z"/><path d="M20 5h-7v15h5a2 2 0 0 0 2-2z"/></svg>
@@ -300,12 +326,12 @@
           <div class="pillar">
             <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v3M12 19v3M2 12h3M19 12h3"/></svg>
             <div class="p-label">TRAIN</div>
-            <div class="p-desc">Small real-world reps in your actual conversations.</div>
+            <div class="p-desc">One small, real no in an actual conversation.</div>
           </div>
           <div class="pillar">
             <svg viewBox="0 0 24 24"><path d="M4 5h16v11H8l-4 4z"/></svg>
             <div class="p-label">COACH</div>
-            <div class="p-desc">Guided AI coaching sessions with The Observer.</div>
+            <div class="p-desc">Guided AI coaching sessions with The Keeper.</div>
           </div>
           <div class="pillar">
             <svg viewBox="0 0 24 24"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M8.5 11l1.5 1.5L14 9M8.5 16l1.5 1.5L14 14"/></svg>
@@ -322,14 +348,48 @@
         <div class="eyebrow">Your seven days</div>
         <h2 style="margin-top:12px;">What you'll do, day by day</h2>
         <ul class="days">
-          <li><span class="d-num">Day 1</span><span class="d-title">Catch the Performance</span><span class="d-meta">Read + observe · 18 min</span></li>
-          <li><span class="d-num">Day 2</span><span class="d-title">The Verdict</span><span class="d-meta">Reading · 20 min</span></li>
-          <li><span class="d-num">Day 3</span><span class="d-title">Rehearse the Truth</span><span class="d-meta">Coaching · 25 min</span></li>
-          <li><span class="d-num">Day 4</span><span class="d-title">Open One Door</span><span class="d-meta">Field practice · 15 min</span></li>
-          <li><span class="d-num">Day 5</span><span class="d-title">Go One Step Bolder</span><span class="d-meta">Field practice · 15 min</span></li>
-          <li><span class="d-num">Day 6</span><span class="d-title">Build Your Own Drill</span><span class="d-meta">Coaching · 25 min</span></li>
+          <li><span class="d-num">Day 1</span><span class="d-title">Catch the Yes</span><span class="d-meta">Read + observe · 18 min</span></li>
+          <li><span class="d-num">Day 2</span><span class="d-title">The Pity Trap</span><span class="d-meta">Reading · 20 min</span></li>
+          <li><span class="d-num">Day 3</span><span class="d-title">Find Your Yes</span><span class="d-meta">Coaching · 25 min</span></li>
+          <li><span class="d-num">Day 4</span><span class="d-title">One Clean No</span><span class="d-meta">Field practice · 15 min</span></li>
+          <li><span class="d-num">Day 5</span><span class="d-title">Hold the Line</span><span class="d-meta">Field practice · 15 min</span></li>
+          <li><span class="d-num">Day 6</span><span class="d-title">Build Your Fence</span><span class="d-meta">Coaching · 25 min</span></li>
           <li><span class="d-num">Day 7</span><span class="d-title">Measure the Change</span><span class="d-meta">Review · 15 min</span></li>
         </ul>
+      </div>
+    </section>
+
+    <!-- ============ THE PITY TRAP — FISKE QUADRANT ============ -->
+    <section class="section">
+      <div class="wrap">
+        <div class="eyebrow">The pity trap</div>
+        <h2 style="margin-top:12px;">Four rooms — and the one your warmth traps you in</h2>
+        <p style="margin-top:16px;">Your brain runs two scans on everyone it meets — <strong>warmth</strong> (are they on my side?) and <strong>competence</strong> (does their judgment count?). Two scores, two separate ledgers. Warmth buys liking. Competence buys respect. And the currencies don't convert.</p>
+        <div class="quad-axes">↑ Warmth &nbsp;·&nbsp; Competence →</div>
+        <div class="quadrant">
+          <div class="q pity">
+            <div class="q-emotion">Pity</div>
+            <div class="q-axis">Warm · not counted</div>
+            <div class="q-desc">Liked, relied on — and quietly passed over. The room a reflex-yes files you into.</div>
+            <span class="q-here">You may be here</span>
+          </div>
+          <div class="q">
+            <div class="q-emotion">Admiration</div>
+            <div class="q-axis">Warm · capable</div>
+            <div class="q-desc">Both liked and counted on. Where your warmth is meant to land.</div>
+          </div>
+          <div class="q">
+            <div class="q-emotion">Contempt</div>
+            <div class="q-axis">Cold · low standing</div>
+            <div class="q-desc">The room nobody wants — dismissed on both scores.</div>
+          </div>
+          <div class="q">
+            <div class="q-emotion">Envy</div>
+            <div class="q-axis">Capable · not warm</div>
+            <div class="q-desc">Respected, not enjoyed — but never scheduled over.</div>
+          </div>
+        </div>
+        <p style="margin-top:22px; color:var(--text-muted);">Nobody lands in "pity" by being incompetent. You land there when your warmth is always visible and your limits never are. This program moves you — not by getting colder, but by getting your yes back.</p>
       </div>
     </section>
 
@@ -338,28 +398,14 @@
       <div class="wrap">
         <div class="lab">
           <div class="eyebrow">Your coach</div>
-          <h2 style="margin-top:10px;">Meet The Observer</h2>
-          <p>A trainer who only talks is just a podcast. The Observer interrupts — at the exact moments you'd rather keep reading — and asks the questions a good coach would ask.</p>
+          <h2 style="margin-top:10px;">Meet The Keeper</h2>
+          <p>A keeper of a garden doesn't apologize for the fence — they know what's growing inside it. All week, The Keeper asks you one question in different forms: <em>what is your yes protecting?</em></p>
           <ul>
-            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>On Days 3 and 6, it becomes an interactive coaching session</li>
-            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>Runs with ChatGPT or Claude — whichever you already use</li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>On Days 3 and 6, an interactive coaching session</li>
+            <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>Runs with ChatGPT or Claude — whichever you use</li>
             <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>No technical skill needed — you just talk</li>
             <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>No AI? A full notebook version is built in</li>
           </ul>
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ BEFORE / AFTER PROOF ============ -->
-    <section class="section">
-      <div class="wrap">
-        <div class="eyebrow">Proof you can see</div>
-        <h2 style="margin-top:12px;">You'll measure the change yourself</h2>
-        <p class="lead">Every trainer starts with a measurement. On Day 0 you take a baseline. On Day 7 you take it again — and read the difference with your own eyes, not our word for it.</p>
-        <div class="measure">
-          <div class="cell d0"><div class="k">Day 0</div><div class="v">A snapshot of where your wall stands today.</div></div>
-          <div class="arrow">→</div>
-          <div class="cell d7"><div class="k">Day 7</div><div class="v">Before-and-after notes that prove something moved.</div></div>
         </div>
       </div>
     </section>
@@ -369,12 +415,11 @@
       <div class="wrap">
         <div class="eyebrow">Grounded in real research</div>
         <h2 style="margin-top:12px;">This isn't self-help. It's psychology.</h2>
-        <p style="margin-top:16px;">The program uses four well-known studies as training lenses — ways to test small behaviors and compare your fear with the evidence.</p>
+        <p style="margin-top:16px;">The program uses three well-known studies as training lenses — ways to check the forecasts your fear makes against what research has actually measured.</p>
         <ul class="studies">
-          <li><strong>Aronson, 1966</strong> — the pratfall effect: why a competent person's small mistake can make them more likable</li>
-          <li><strong>Aron, 1997</strong> — how strangers became close in 45 minutes through gradual, honest disclosure</li>
-          <li><strong>Bruk, 2018</strong> — the "beautiful mess effect": you judge your own vulnerability far more harshly than others do</li>
-          <li><strong>Boothby, 2018</strong> — the "liking gap": people underestimate how much others actually like them</li>
+          <li><strong>Fiske et al., 2002</strong> — warmth and competence: the two separate scales people judge you on, and the four responses they produce</li>
+          <li><strong>Givi &amp; Kirk</strong> — five experiments, 2,000+ people: declining costs the other person far less than you fear</li>
+          <li><strong>Flynn &amp; Bohns</strong> — 14,000 strangers: people say yes far more than askers expect, and can't feel the pressure their request creates</li>
         </ul>
       </div>
     </section>
@@ -385,15 +430,13 @@
         <div class="eyebrow">A look inside</div>
         <h2 style="margin-top:12px;">Read a sample</h2>
         <div class="preview">
-          <div class="preview-label">From Day 1 — The lie you've been told</div>
-          <p>Somewhere along the way, you were handed a question and told it was the right one to ask. <em>How do I get people to like me?</em></p>
-          <p>It seems harmless. Reasonable, even. And every answer the world gave you pointed in the same direction. Smile more. Talk more. Be helpful. Be agreeable. Say yes.</p>
-          <p>None of it is wrong, exactly. But all of it rests on one quiet assumption you've never stopped to question — that people like you because of what you <em>do</em>.</p>
-          <p>Here's the part nobody told you. The harder you work at being liked, the more you feel it slipping away.</p>
-          <p>You've seen this. You just called it something else…</p>
+          <div class="preview-label">From Day 1 — The tax you never agreed to</div>
+          <p>Somewhere along the way, you made a quiet deal with the people around you. Nobody wrote it down. But the terms were clear on both sides: I'll be easy — and in exchange, you'll value me.</p>
+          <p>So you paid. You took the extra task without asking why it was yours. You said "no worries" to the third last-minute change. You answered the message at ten p.m. because leaving it felt rude.</p>
+          <p>And here's the question you've been avoiding, maybe for years: has the other side of the deal ever paid out?</p>
+          <p>Be honest. The people you're easiest with — do they treat your time as more valuable, or less?…</p>
           <div class="fade"></div>
         </div>
-        <a class="buy secondary" href="day-1.html" target="_blank" rel="noopener" style="max-width:320px; margin:24px auto 0;">Read all of Day 1 free →</a>
       </div>
     </section>
 
@@ -403,14 +446,33 @@
         <div class="eyebrow">Your baseline</div>
         <h2 style="margin-top:12px;">Does this sound like you?</h2>
         <ul class="checklist">
-          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>I say yes when I actually want to say no.</li>
-          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>I apologize even when nothing is my fault.</li>
-          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>I stay quiet rather than disagree.</li>
-          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>I hide what I really think to keep things smooth.</li>
-          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>I become a slightly different person around people I want to impress.</li>
-          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>I'd rather seem fine than admit I'm struggling.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>I take on work that isn't mine because refusing feels rude.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>I laugh off moments when someone crosses a line with me.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>When I say no, I start with an apology.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>I keep explaining my decisions until the other person approves.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>People come to me last-minute because they know I'll say yes.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>I feel responsible for how other people react to my decisions.</li>
         </ul>
         <p style="margin-top:22px; font-weight:600; color:#1A1A1A;">If you marked even one, this program was built for you.</p>
+      </div>
+    </section>
+
+    <!-- ============ WALL vs FENCE ============ -->
+    <section class="section">
+      <div class="wrap">
+        <div class="eyebrow">The wall and the fence</div>
+        <h2 style="margin-top:12px;">A wall hides you. A fence protects what's growing.</h2>
+        <div class="diff">
+          <div class="col">
+            <div class="tag">Session 1 · The Wall</div>
+            <div class="big">Took down the wall so people could finally reach you. It made you easier to find.</div>
+          </div>
+          <div class="col hl">
+            <div class="tag">Session 2 · The Fence</div>
+            <div class="big">Builds a fence around what matters — so not everyone gets to spend you.</div>
+          </div>
+        </div>
+        <p style="margin-top:22px; color:var(--text-muted);">You don't need Session 1 first — but together they're the full move: seen, and protected.</p>
       </div>
     </section>
 
@@ -424,11 +486,11 @@
             <tr><th>What you used to reach for</th><th class="col-arrow"></th><th>What actually works</th></tr>
           </thead>
           <tbody>
-            <tr><td class="old">Trying to impress</td><td class="col-arrow">→</td><td class="new">Trying to connect</td></tr>
-            <tr><td class="old">Performing</td><td class="col-arrow">→</td><td class="new">Revealing</td></tr>
-            <tr><td class="old">Looking perfect</td><td class="col-arrow">→</td><td class="new">Being reachable</td></tr>
-            <tr><td class="old">Chasing approval</td><td class="col-arrow">→</td><td class="new">Being truly known</td></tr>
-            <tr><td class="old">Hiding the real you</td><td class="col-arrow">→</td><td class="new">Letting yourself be seen</td></tr>
+            <tr><td class="old">The reflex-yes</td><td class="col-arrow">→</td><td class="new">The chosen yes</td></tr>
+            <tr><td class="old">"Sorry, but…"</td><td class="col-arrow">→</td><td class="new">A warm word and a clear no</td></tr>
+            <tr><td class="old">A paragraph of reasons</td><td class="col-arrow">→</td><td class="new">One true line</td></tr>
+            <tr><td class="old">New excuses under pressure</td><td class="col-arrow">→</td><td class="new">The same no, same warmth</td></tr>
+            <tr><td class="old">Being liked</td><td class="col-arrow">→</td><td class="new">Being counted</td></tr>
           </tbody>
         </table>
       </div>
@@ -437,22 +499,27 @@
     <!-- ============ SESSIONS ============ -->
     <section class="section">
       <div class="wrap">
-        <div class="eyebrow">The program</div>
-        <h2 style="margin-top:12px;">Session 1 of an ongoing series</h2>
-        <p class="lead">Each session trains one layer of how people connect. Start with the first — the rest are on the way.</p>
+        <div class="eyebrow">The collection</div>
+        <h2 style="margin-top:12px;">One force in human behavior at a time</h2>
         <div class="sessions">
-          <div class="sess active">
+          <a class="sess done" href="the-likeability-lie.html">
             <div class="s-num">Session 1</div>
             <div class="s-title">The Wall</div>
-            <div class="s-desc">Learn to open the door — one true sentence, one breath, one crack of light.</div>
-            <div class="s-status">Available now</div>
-          </div>
-          <a class="sess" href="the-fence.html" style="display:block;">
+            <div class="s-desc">Stop performing. Let yourself be seen.</div>
+            <div class="s-status">Available →</div>
+          </a>
+          <div class="sess active">
             <div class="s-num">Session 2</div>
             <div class="s-title">The Fence</div>
-            <div class="s-desc">Get your yes back — protect what matters without closing yourself off.</div>
-            <div class="s-status" style="color:#1A1A1A;">Available →</div>
-          </a>
+            <div class="s-desc">Get your yes back. Protect what matters.</div>
+            <div class="s-status">You're here</div>
+          </div>
+          <div class="sess soon">
+            <div class="s-num">Session 3</div>
+            <div class="s-title">The Garden</div>
+            <div class="s-desc">Where you spend the yes you reclaimed.</div>
+            <div class="s-status">Coming soon</div>
+          </div>
         </div>
       </div>
     </section>
@@ -464,28 +531,28 @@
         <h2 style="margin-top:12px;">Good to know</h2>
         <div style="margin-top:20px;">
           <details open>
+            <summary>Do I need to do Session 1 first?</summary>
+            <p>No — The Fence stands on its own. If you've done Session 1 (The Wall), the two fit together: one makes you reachable, the other makes sure not everyone gets to spend you.</p>
+          </details>
+          <details>
             <summary>Is this a book?</summary>
-            <p>No. It's a 7-day training program — daily reading, real-world practice, and two guided coaching sessions. You don't read it in one sitting; you run it over a week.</p>
+            <p>No. It's a 7-day training program — daily reading, real-world practice, and two guided coaching sessions. You run it over a week, not in one sitting.</p>
           </details>
           <details>
             <summary>How much time does it take?</summary>
-            <p>15–25 minutes a day for 7 days. Some days you read, some days you practice in real conversations, some days you work with the coach.</p>
+            <p>15–25 minutes a day for 7 days.</p>
           </details>
           <details>
             <summary>Do I need ChatGPT or Claude?</summary>
-            <p>The coaching sessions work best with a free AI assistant, but a complete notebook version is built in. No technical skill needed either way.</p>
+            <p>The coaching works best with a free AI assistant, but a complete notebook version is built in. No technical skill needed.</p>
           </details>
           <details>
             <summary>Is this therapy?</summary>
-            <p>No. It's educational and self-guided — not therapy or a substitute for professional mental health support. If heavier things surface, the program says so and points you to better tools.</p>
+            <p>No. It's educational and self-guided — not therapy or a substitute for professional support. If saying no in a specific relationship feels genuinely unsafe, the program says so and points you to real help.</p>
           </details>
           <details>
             <summary>What format is it, and how do I get it?</summary>
             <p>Instant digital download (PDF), readable on phone, tablet, or computer. The download appears right after checkout and is emailed to you automatically — no account required.</p>
-          </details>
-          <details>
-            <summary>Can I get a refund?</summary>
-            <p>Because this is an instant-access digital product, purchases are generally final once accessed or downloaded. If you have a technical issue, duplicate charge, or believe the product does not match the description, email us within 7 days and we'll review it and make it right where appropriate. See the <a href="refund.html" style="color:inherit; text-decoration:underline;">refund policy</a>.</p>
           </details>
         </div>
       </div>
@@ -496,16 +563,16 @@
   <!-- ============ FINAL CTA ============ -->
   <section class="final">
     <div class="wrap">
-      <h2>Seven days from now, you'll have proof.</h2>
+      <h2>Seven days from now, your word means something again.</h2>
       <div class="stmt">
-        <p>Not another thing you read and forgot — a before-and-after in your own handwriting, from your own life.</p>
+        <p>A no that stays said. A yes that finally costs something — and so, finally, counts.</p>
       </div>
-      <p class="signature">Don't try to be liked. Try to be reachable.</p>
+      <p class="signature">This was never a program about saying no. It's about getting your yes back.</p>
       <div class="price-row">
         <span class="now">$9</span>
         <span class="was">$19</span>
       </div>
-      <a class="buy" href="https://buy.polar.sh/polar_cl_0AiGAhcJLnjWbXIJk4UQ0WfdUyRlK14kel92Q2KLwma">Start Day 1 — instant access</a>
+      <a class="buy" href="https://buy.polar.sh/REPLACE_WITH_FENCE_LINK">Start Day 1 — instant access</a>
       <div class="launch-note" style="display:inline-flex;">
         <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
         <span><strong>Launch price ends July 14, 2026.</strong> After that, it returns to $19.</span>
