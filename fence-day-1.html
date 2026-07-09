@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Day 1 — Catch the Yes · The Fence (free)</title>
+  <meta name="description" content="Day 1 of The Fence, free. Count every yes that isn't true — the first rep of a 7-day training program on respect and boundaries." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="logo.jpg" />
+  <link rel="apple-touch-icon" href="logo.jpg" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="article" />
+  <meta property="og:site_name" content="Why Humans Do That" />
+  <meta property="og:title" content="WHY HUMANS DO THAT" />
+  <meta property="og:description" content="Connection Coaching Based on Psychology" />
+  <meta property="og:image" content="https://whyhumansdothat.com/thumb.jpg" />
+  <meta property="og:image:width" content="1248" />
+  <meta property="og:image:height" content="832" />
+  <meta property="og:url" content="https://whyhumansdothat.com/fence-day-1.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WHY HUMANS DO THAT" />
+  <meta name="twitter:description" content="Connection Coaching Based on Psychology" />
+  <meta name="twitter:image" content="https://whyhumansdothat.com/thumb.jpg" />
+
+  <style>
+    :root { --bg: #FAFAFA; --surface: #FFFFFF; --text: #1A1A1A; --text-muted: #6B6B6B; --border: #E8E8E8; --black: #1A1A1A; --max: 1080px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; letter-spacing: -0.01em; }
+    a { color: inherit; }
+
+    header { border-bottom: 1px solid var(--border); background: var(--bg); }
+    .header-inner { max-width: var(--max); margin: 0 auto; padding: 20px 24px; display: flex; align-items: center; justify-content: space-between; gap: 16px; }
+    .brand-name { font-size: 16px; font-weight: 700; letter-spacing: -0.02em; text-decoration: none; }
+    .back { font-size: 14px; font-weight: 500; color: var(--text-muted); text-decoration: none; }
+    .back:hover { color: var(--text); }
+
+    .free-strip { background: #1A1A1A; color: #fff; text-align: center; font-size: 13px; font-weight: 500; padding: 9px 16px; letter-spacing: 0.01em; }
+
+    .reading { max-width: 680px; margin: 0 auto; padding: 48px 24px 24px; }
+    .kicker { font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-muted); }
+    h1 { font-size: 40px; font-weight: 700; letter-spacing: -0.03em; line-height: 1.08; margin-top: 12px; }
+    .facts { list-style: none; margin: 22px 0 0; padding: 18px 0; border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); display: grid; gap: 8px; }
+    .facts li { font-size: 14px; color: var(--text-muted); }
+    .facts li strong { color: var(--text); font-weight: 600; }
+
+    .prose { margin-top: 8px; }
+    .prose p { font-size: 18px; line-height: 1.75; color: #262626; margin-top: 20px; }
+    .prose h2 { font-size: 13px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); margin-top: 44px; }
+    .prose .big-line { font-size: 22px; font-weight: 600; color: #1A1A1A; line-height: 1.5; }
+    .prose em { font-style: italic; }
+
+    .observer { background: #F4F4F4; border-radius: 12px; padding: 24px 26px; margin-top: 28px; }
+    .observer .lbl { font-size: 11px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: #1A1A1A; display: flex; align-items: center; gap: 8px; }
+    .observer .lbl svg { width: 16px; height: 16px; stroke: #1A1A1A; fill: none; stroke-width: 1.7; }
+    .observer p { font-size: 17px; line-height: 1.7; color: #333; margin-top: 12px; }
+    .observer p:first-of-type { margin-top: 14px; }
+
+    .box { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 24px 26px; margin-top: 28px; }
+    .box .b-title { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text-muted); }
+    .box p { font-size: 17px; line-height: 1.7; color: #333; margin-top: 12px; }
+    .box .quote { font-size: 18px; font-weight: 500; color: #1A1A1A; margin-top: 14px; }
+    .box ul { list-style: none; margin-top: 14px; display: grid; gap: 10px; }
+    .box ul li { font-size: 16px; color: #333; padding-left: 18px; position: relative; }
+    .box ul li:before { content: "—"; position: absolute; left: 0; color: #B0B0B0; }
+    .box .scale { font-size: 14px; color: var(--text-muted); margin-top: 10px; }
+
+    .complete { text-align: center; margin-top: 44px; padding-top: 32px; border-top: 1px solid var(--border); }
+    .complete .check { font-size: 13px; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); }
+    .complete .next { font-size: 18px; color: var(--text-muted); margin-top: 12px; }
+
+    .cta { max-width: 680px; margin: 8px auto 0; padding: 24px; }
+    .cta-card { background: #1A1A1A; color: #fff; border-radius: 16px; padding: 40px 32px; text-align: center; }
+    .cta-card .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: #9A9A9A; }
+    .cta-card h2 { font-size: 26px; font-weight: 700; letter-spacing: -0.02em; margin-top: 12px; color: #fff; }
+    .cta-card p { font-size: 16px; color: #C8C8C8; margin-top: 12px; max-width: 460px; margin-left: auto; margin-right: auto; }
+    .cta-card .price { font-size: 15px; color: #fff; margin-top: 18px; }
+    .cta-card .price s { color: #8A8A8A; margin-left: 6px; }
+    .cta-btn { display: inline-block; background: #fff; color: #1A1A1A; font-size: 16px; font-weight: 600; padding: 15px 32px; border-radius: 10px; margin-top: 18px; text-decoration: none; transition: opacity .15s, transform .15s; }
+    .cta-btn:hover { opacity: 0.9; transform: translateY(-1px); }
+    .cta-card .fine { font-size: 12px; color: #8A8A8A; margin-top: 14px; }
+
+    footer { border-top: 1px solid var(--border); margin-top: 40px; }
+    .footer-inner { max-width: var(--max); margin: 0 auto; padding: 32px 24px; text-align: center; }
+    .copyright { font-size: 12px; color: #A0A0A0; }
+
+    @media (max-width: 620px) { h1 { font-size: 32px; } .prose p { font-size: 17px; } }
+  </style>
+</head>
+<body>
+
+  <div class="free-strip">Free preview · Day 1 of 7 — no signup required</div>
+
+  <header>
+    <div class="header-inner">
+      <a class="brand-name" href="index.html">Why Humans Do That</a>
+      <a class="back" href="the-fence.html">← Back to the program</a>
+    </div>
+  </header>
+
+  <article class="reading">
+    <div class="kicker">Session 2 · Day 1</div>
+    <h1>Catch the Yes</h1>
+    <ul class="facts">
+      <li><strong>Training focus</strong> — Spotting the yes that isn't true</li>
+      <li><strong>Today's goal</strong> — Count every yes you give today that you don't mean. Don't change them yet.</li>
+      <li><strong>Estimated time</strong> — 18 minutes</li>
+    </ul>
+
+    <div class="observer">
+      <div class="lbl"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>The Keeper</div>
+      <p>Before you start, one instruction.</p>
+      <p>Today you don't say no to anything. Nothing changes today — you'll say every yes you were going to say anyway.</p>
+      <p>The difference is that today, for the first time, you'll be counting. Somewhere in the next few pages you're going to recognize a transaction you've been making for years without ever seeing the receipt.</p>
+      <p>When you do, don't rush past it. Begin.</p>
+    </div>
+
+    <div class="prose">
+      <h2>The tax you never agreed to</h2>
+      <p>Somewhere along the way, you made a quiet deal with the people around you. Nobody wrote it down. You never signed anything. But the terms were clear on both sides: <em>I'll be easy — and in exchange, you'll value me.</em></p>
+      <p>So you paid. You took the extra task without asking why it was yours. You said "no worries" to the third last-minute change. You laughed at the small jab in the meeting, swallowed the schedule that ran over yours, answered the message at ten p.m. because leaving it felt rude. Every payment small. Every payment reasonable on its own.</p>
+      <p>And here's the question you've been avoiding, maybe for years: has the other side of the deal ever paid out?</p>
+      <p>Be honest. The people you're easiest with — do they treat your time as more valuable, or less? Do they check with you before assuming, or assume because it's you? When something inconvenient needs a home, whose desk does it land on?</p>
+      <p class="big-line">The more reliably you say yes, the less your yes seems to be worth.</p>
+      <p>It isn't because the people around you are cruel. Most of them aren't. Something else is going on, and it took psychologists decades to map it.</p>
+      <p>In 2002, psychologist Susan Fiske and her colleagues published a study that became one of the most cited in modern social psychology. Their question was deceptively simple: when people size each other up, what are they actually measuring?</p>
+      <p>The answer: your brain runs two separate scans on every person you meet. The first asks — are they <em>warm</em>? Friendly, trustworthy, on my side? The second asks — are they <em>capable</em>? Competent, effective, someone whose judgment counts?</p>
+      <p>Two scans. Two scores. And here's the part almost nobody is told: the scores are kept on <em>separate ledgers.</em> Warmth buys you liking. Competence buys you respect. And the currencies don't convert.</p>
+      <p>Every accommodating yes, every swallowed objection, every "it's fine" — all of it was deposited into the liking account. And liking is real; it's worth something. But you've been checking the respect balance and wondering why it never grows, while making every deposit into the account next door.</p>
+      <p class="big-line">That's the tax. Not the yeses themselves — the belief that they were buying you something they were never able to buy.</p>
+    </div>
+
+    <div class="observer">
+      <div class="lbl"><svg viewBox="0 0 24 24"><path d="M12 3l8 4v5c0 5-3.5 8-8 9-4.5-1-8-4-8-9V7z"/></svg>The Keeper</div>
+      <p>Stop here.</p>
+      <p>Somewhere in the last two pages, a face appeared. The person whose requests you can't seem to refuse. The one whose messages you answer first and whose inconvenience becomes your schedule.</p>
+      <p>Write down their name. Just the name. If your stomach tightened at one name in particular — that's the name.</p>
+      <p>Don't keep reading until you do. The page will wait.</p>
+    </div>
+
+    <div class="prose">
+      <p>Now, before tomorrow, one thing needs to be said plainly. The answer is <em>not</em> to stop being warm.</p>
+      <p>Read that twice, because everything in you that's tired of being taken for granted wants to swing the other way — to get cold, get hard, make them feel the difference. That swing fails, because warmth was never the problem. Warmth is one of the two things people genuinely value in you, and it's the one they check first.</p>
+      <p>The problem is what your warmth has been doing without your permission. It's been signing agreements on your behalf. Answering questions nobody asked you yet. Saying yes before you arrived in the room.</p>
+      <p>There's a difference between giving freely and paying protection money, even when the two look identical from the outside. One is generosity. The other is fear wearing generosity's clothes. And you can feel the difference from the inside, in the half-second before the yes comes out: one feels like a choice. The other feels like a reflex with your voice.</p>
+      <p>Today you're only learning to tell them apart. Tomorrow you'll see exactly where the reflex-yes has been landing you — because that place has a name in the research, and it's the most uncomfortable quadrant on Fiske's map.</p>
+    </div>
+
+    <div class="box">
+      <div class="b-title">Drill — Name and number</div>
+      <p>Open your notes. First, finish this sentence with the name you just wrote:</p>
+      <p class="quote">"The person it's hardest to say no to right now is ______."</p>
+      <p>Now one number. When they ask for something, how hard is it to refuse?</p>
+      <p class="scale">1 — I refuse easily when I need to &nbsp;·&nbsp; 5 — My yes is out before I've decided anything</p>
+      <p>Write the number next to the name. No judgment, no fixing. This is your starting weight — you'll lift it again on Day 7 and see what's changed.</p>
+    </div>
+
+    <div class="box">
+      <div class="b-title">Today's mission</div>
+      <p>For the rest of today, count every yes that isn't true. Look for one of these:</p>
+      <ul>
+        <li>the yes that's out of your mouth before you've thought</li>
+        <li>the "no worries" that has worries in it</li>
+        <li>the "it's fine" covering something that isn't</li>
+        <li>the favor you accept while your schedule quietly screams</li>
+      </ul>
+      <p>Don't refuse anything. Don't change anything. Just keep the tally — a mark each time. Tonight, write the number down. Most people are shocked by it. That shock is the training.</p>
+    </div>
+
+    <div class="complete">
+      <div class="check">✓ Day 1 complete</div>
+      <p class="next">Most people pay this tax for decades without ever counting it. You counted it in one day.</p>
+    </div>
+  </article>
+
+  <!-- CTA back to the program -->
+  <section class="cta">
+    <div class="cta-card">
+      <div class="eyebrow">That was Day 1 of 7</div>
+      <h2>Tomorrow, the trap gets a name.</h2>
+      <p>Day 2 shows you the exact quadrant all those yeses have been landing you in — liked, and quietly overlooked. Days 2 through 7 include your coaching sessions, field practice, and the before-and-after that proves your word carries weight again.</p>
+      <div class="price">$9 <s>$19</s> · launch price</div>
+      <a class="cta-btn" href="the-fence.html">Start the full program</a>
+      <div class="fine">Instant access · Secure checkout via Polar · No account needed</div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-inner">
+      <div class="copyright">© 2026 Why Humans Do That. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
