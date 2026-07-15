@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The No Formula — Why Humans Do That</title>
+  <meta name="description" content="The psychology of saying no — plus copy-paste scripts for every room. Stop negotiating against yourself. Instant download, no account needed." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Favicon -->
+  <link rel="icon" href="logo.jpg" />
+  <link rel="apple-touch-icon" href="logo.jpg" />
+
+  <!-- Open Graph / social preview -->
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Why Humans Do That" />
+  <meta property="og:title" content="WHY HUMANS DO THAT" />
+  <meta property="og:description" content="Connection Coaching Based on Psychology" />
+  <meta property="og:image" content="https://whyhumansdothat.com/thumb.jpg" />
+  <meta property="og:image:width" content="1248" />
+  <meta property="og:image:height" content="832" />
+  <meta property="og:url" content="https://whyhumansdothat.com/the-no-formula.html" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="WHY HUMANS DO THAT" />
+  <meta name="twitter:description" content="Connection Coaching Based on Psychology" />
+  <meta name="twitter:image" content="https://whyhumansdothat.com/thumb.jpg" />
+
+  <style>
+    :root { --bg: #FAFAFA; --surface: #FFFFFF; --text: #1A1A1A; --text-muted: #6B6B6B; --border: #E8E8E8; --black: #1A1A1A; --red: #C0392B; --max: 1080px; }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; scroll-behavior: smooth; }
+    body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif; background: var(--bg); color: var(--text); line-height: 1.6; letter-spacing: -0.01em; }
+    a { color: inherit; text-decoration: none; }
+
+    /* Header */
+    header { border-bottom: 1px solid var(--border); background: var(--bg); }
+    .header-inner { max-width: var(--max); margin: 0 auto; padding: 22px 24px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 16px; }
+    .nav-left { display: flex; gap: 28px; }
+    .nav-left a { font-size: 14px; font-weight: 500; color: var(--text-muted); transition: color .15s; }
+    .nav-left a:hover { color: var(--text); }
+    .brand { text-align: center; }
+    .brand-name { font-size: 17px; font-weight: 700; letter-spacing: -0.02em; }
+    .brand-tag { font-size: 12px; color: var(--text-muted); margin-top: 2px; }
+    .nav-right { display: flex; justify-content: flex-end; align-items: center; gap: 18px; }
+    .nav-right a { color: var(--text-muted); display: inline-flex; transition: color .15s; }
+    .nav-right a:hover { color: var(--text); }
+    .icon { width: 18px; height: 18px; stroke: currentColor; fill: none; stroke-width: 1.6; }
+
+    /* Layout primitives */
+    main { max-width: var(--max); margin: 0 auto; padding: 0 24px; }
+    .wrap { max-width: 680px; margin: 0 auto; }
+    .section { padding: 56px 0; }
+    .section + .section { border-top: 1px solid var(--border); }
+    .eyebrow { font-size: 12px; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-muted); }
+    h2 { font-size: 27px; font-weight: 700; letter-spacing: -0.025em; line-height: 1.25; }
+    .lead { font-size: 18px; color: #333; margin-top: 14px; }
+    p { font-size: 17px; color: #333; }
+    p + p { margin-top: 14px; }
+
+    /* Hero */
+    .hero { display: grid; grid-template-columns: 0.85fr 1fr; gap: 56px; align-items: center; padding: 60px 0; }
+    .cover { position: relative; aspect-ratio: 2/3; background: #111; border: 1px solid var(--border); border-radius: 14px; overflow: hidden; display: flex; align-items: center; justify-content: center; }
+    .cover img { width: 100%; height: 100%; object-fit: cover; }
+    .hero-copy .eyebrow { display: block; margin-bottom: 14px; }
+    .hero-copy h1 { font-size: 44px; font-weight: 700; letter-spacing: -0.035em; line-height: 1.04; }
+    .hero-copy .sub { font-size: 20px; color: var(--text); font-weight: 600; margin-top: 14px; }
+    .hero-hook { margin-top: 18px; }
+    .hero-hook p { font-size: 16px; color: var(--text-muted); }
+
+    /* Offer */
+    .offer { margin-top: 26px; }
+    .price-row { display: flex; align-items: baseline; gap: 12px; }
+    .price-row .now { font-size: 34px; font-weight: 700; letter-spacing: -0.02em; }
+    .price-row .was { font-size: 18px; color: #B0B0B0; text-decoration: line-through; }
+    .launch-note { font-size: 13px; color: var(--text); margin-top: 10px; display: inline-flex; align-items: center; gap: 7px; background: #F0F0F0; padding: 6px 12px; border-radius: 7px; }
+    .launch-note svg { width: 14px; height: 14px; stroke: currentColor; fill: none; stroke-width: 1.7; }
+    .launch-note strong { font-weight: 600; }
+    .buy { display: block; width: 100%; text-align: center; background: var(--black); color: #fff; font-size: 16px; font-weight: 600; padding: 17px; border-radius: 10px; margin-top: 20px; transition: opacity .15s, transform .15s; }
+    .buy:hover { opacity: 0.88; transform: translateY(-1px); }
+    .reassure { font-size: 13px; color: var(--text-muted); text-align: center; margin-top: 12px; }
+    .reassure a { color: inherit; text-decoration: underline; }
+    .meta { margin-top: 26px; display: flex; flex-wrap: wrap; gap: 10px 28px; }
+    .meta div { font-size: 13px; }
+    .meta .k { color: var(--text-muted); }
+    .meta .v { font-weight: 600; margin-top: 1px; }
+
+    /* Statement / hook */
+    .stmt p { font-size: 20px; color: #1A1A1A; line-height: 1.7; }
+    .stmt .soft { color: var(--text-muted); }
+    .stmt .beats { font-weight: 600; }
+
+    /* Chapters (four doors) */
+    .doors { list-style: none; counter-reset: ch; margin-top: 22px; }
+    .doors li { counter-increment: ch; display: grid; grid-template-columns: 40px 1fr; gap: 16px; align-items: baseline; padding: 16px 0; border-bottom: 1px solid var(--border); }
+    .doors li:before { content: counter(ch, decimal-leading-zero); font-size: 13px; font-weight: 600; color: #B0B0B0; }
+    .doors .d-title { font-size: 17px; font-weight: 600; }
+    .doors .d-desc { font-size: 14px; color: var(--text-muted); margin-top: 3px; }
+
+    /* Formulas */
+    .formulas { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin-top: 24px; }
+    .formula { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; }
+    .formula .f-name { font-size: 13px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 600; }
+    .formula .f-line { font-size: 18px; font-weight: 600; margin-top: 8px; line-height: 1.4; letter-spacing: -0.01em; }
+    .formula .f-desc { font-size: 14px; color: var(--text-muted); margin-top: 8px; line-height: 1.5; }
+
+    /* Scripts (before / instead) */
+    .scripts { display: grid; gap: 16px; margin-top: 24px; }
+    .script { background: var(--surface); border: 1px solid var(--border); border-radius: 12px; padding: 22px 24px; }
+    .script .situation { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 600; }
+    .script .line { display: flex; gap: 10px; margin-top: 12px; font-size: 16px; line-height: 1.5; }
+    .script .line .mk { flex-shrink: 0; font-weight: 700; }
+    .script .old .mk { color: var(--red); }
+    .script .old .tx { color: var(--text-muted); }
+    .script .new { margin-top: 10px; }
+    .script .new .mk { color: #1A1A1A; }
+    .script .new .tx { color: #1A1A1A; font-weight: 500; }
+
+    /* Preview */
+    .preview { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 34px 36px; position: relative; margin-top: 8px; }
+    .preview .preview-label { font-size: 12px; text-transform: uppercase; letter-spacing: 0.14em; color: #9A9A9A; margin-bottom: 16px; }
+    .preview p { font-size: 17px; line-height: 1.8; }
+    .preview .dialogue { font-weight: 600; color: #1A1A1A; }
+    .preview .fade { position: absolute; left: 0; right: 0; bottom: 0; height: 110px; background: linear-gradient(to bottom, rgba(255,255,255,0), var(--surface)); border-radius: 0 0 14px 14px; }
+
+    /* Checklist / studies */
+    .checklist { list-style: none; display: grid; gap: 16px; margin-top: 22px; }
+    .checklist li { display: flex; gap: 14px; font-size: 17px; color: #1A1A1A; }
+    .checklist svg { width: 21px; height: 21px; flex-shrink: 0; margin-top: 3px; stroke: #1A1A1A; fill: none; stroke-width: 1.7; }
+    .studies { list-style: none; display: grid; gap: 12px; margin-top: 20px; }
+    .studies li { font-size: 16px; color: #333; padding-left: 20px; position: relative; }
+    .studies li:before { content: "—"; position: absolute; left: 0; color: #B0B0B0; }
+    .studies li strong { font-weight: 600; }
+
+    /* What changed table */
+    .changed { width: 100%; border-collapse: collapse; margin-top: 24px; }
+    .changed th { font-size: 12px; text-transform: uppercase; letter-spacing: 0.1em; color: var(--text-muted); font-weight: 600; text-align: left; padding: 0 0 12px; }
+    .changed td { font-size: 16px; padding: 13px 0; border-top: 1px solid var(--border); }
+    .changed td.old { color: var(--text-muted); text-decoration: line-through; text-decoration-color: #CFCFCF; }
+    .changed td.new { color: #1A1A1A; font-weight: 500; }
+    .changed .col-arrow { color: #B0B0B0; width: 40px; text-align: center; }
+
+    /* Cross-link callout */
+    .callout { background: #1A1A1A; border-radius: 14px; padding: 30px 32px; margin-top: 8px; }
+    .callout .eyebrow { color: #9A9A9A; }
+    .callout h2 { color: #fff; margin-top: 10px; font-size: 22px; }
+    .callout p { color: #C8C8C8; margin-top: 12px; }
+    .callout a.link { display: inline-block; margin-top: 16px; color: #fff; font-weight: 600; text-decoration: underline; font-size: 15px; }
+
+    /* FAQ */
+    .faq details { border-bottom: 1px solid var(--border); padding: 18px 0; }
+    .faq summary { font-size: 17px; font-weight: 600; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary:after { content: "+"; font-size: 22px; font-weight: 400; color: var(--text-muted); }
+    .faq details[open] summary:after { content: "\2013"; }
+    .faq p { font-size: 15px; color: var(--text-muted); margin-top: 12px; }
+    .faq a { color: inherit; text-decoration: underline; }
+
+    /* Final */
+    .final { text-align: center; padding: 64px 0; }
+    .final h2 { font-size: 30px; }
+    .final .stmt { max-width: 540px; margin: 16px auto 0; }
+    .final .stmt p { font-size: 18px; }
+    .final .signature { font-size: 21px; font-weight: 600; color: #1A1A1A; max-width: 540px; margin: 24px auto 0; }
+    .final .price-row { justify-content: center; margin-top: 24px; }
+    .final .buy { max-width: 340px; margin: 18px auto 0; }
+    .final .launch-note { margin-top: 14px; }
+
+    /* Footer */
+    footer { border-top: 1px solid var(--border); }
+    .footer-inner { max-width: var(--max); margin: 0 auto; padding: 40px 24px; text-align: center; }
+    .footer-links { display: flex; justify-content: center; flex-wrap: wrap; gap: 8px 24px; font-size: 13px; color: var(--text-muted); margin-bottom: 18px; }
+    .footer-links a:hover { color: var(--text); }
+    .copyright { font-size: 12px; color: #A0A0A0; }
+
+    @media (max-width: 760px) {
+      .header-inner { grid-template-columns: 1fr; justify-items: center; text-align: center; gap: 14px; }
+      .nav-right { justify-content: center; }
+      .hero { grid-template-columns: 1fr; gap: 30px; padding: 36px 0; }
+      .cover { max-width: 260px; margin: 0 auto; }
+      .hero-copy h1 { font-size: 34px; }
+      h2 { font-size: 23px; }
+      .formulas { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header>
+    <div class="header-inner">
+      <nav class="nav-left">
+        <a href="index.html">Home</a>
+        <a href="index.html#store">Store</a>
+      </nav>
+      <a class="brand" href="index.html" style="color:inherit; text-decoration:none;">
+        <div class="brand-name">Why Humans Do That</div>
+        <div class="brand-tag">Psychology you can train</div>
+      </a>
+      <div class="nav-right">
+        <a href="https://www.youtube.com/@whyhumansdo-that" aria-label="YouTube" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg></a>
+        <a href="https://www.facebook.com/whyhumansdothat/" aria-label="Meta" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24"><path fill="currentColor" stroke="none" d="M6.915 4.03c-1.968 0-3.683 1.28-4.871 3.113C.704 9.208 0 11.883 0 14.449c0 .706.07 1.369.21 1.973a6.624 6.624 0 0 0 .265.86 5.297 5.297 0 0 0 .371.761c.696 1.159 1.818 1.927 3.593 1.927 1.497 0 2.633-.671 3.965-2.444.76-1.012 1.144-1.626 2.663-4.32l.756-1.339.186-.325c.061.1.121.196.183.3l2.152 3.595c.724 1.21 1.665 2.556 2.47 3.314 1.046.987 1.992 1.22 3.06 1.22 1.075 0 1.876-.355 2.455-.843a3.743 3.743 0 0 0 .81-.973c.542-.939.861-2.127.861-3.745 0-2.72-.681-5.357-2.084-7.45-1.282-1.912-2.957-2.93-4.716-2.93-1.047 0-2.088.467-3.053 1.308-.652.57-1.257 1.29-1.82 2.05-.69-.875-1.335-1.547-1.958-2.056-1.182-.966-2.315-1.303-3.454-1.303zm10.16 2.053c1.147 0 2.188.758 2.992 1.999 1.132 1.748 1.647 4.195 1.647 6.4 0 1.548-.368 2.9-1.839 2.9-.58 0-1.027-.23-1.664-1.004-.496-.601-1.343-1.878-2.832-4.358l-.617-1.028a44.908 44.908 0 0 0-1.255-1.98c.07-.109.141-.224.211-.327 1.12-1.667 2.118-2.602 3.03-2.602zm-10.201.553c1.265 0 2.058.791 2.675 1.446.307.327.737.871 1.234 1.579l-1.02 1.566c-.757 1.163-1.882 3.017-2.837 4.338-1.191 1.649-1.81 1.817-2.486 1.817-.524 0-1.038-.237-1.383-.794-.263-.426-.464-1.13-.464-2.046 0-2.221.63-4.535 1.66-6.088.454-.687.964-1.226 1.533-1.533a2.264 2.264 0 0 1 1.076-.271z"/></svg></a>
+        <a href="mailto:architect@anchors.work" aria-label="Email" target="_blank" rel="noopener"><svg class="icon" viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="M3 7l9 6 9-6"/></svg></a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ============ HERO ============ -->
+    <section class="hero">
+      <div class="cover">
+        <picture>
+          <source type="image/webp" srcset="noformula.webp" />
+          <img src="noformula.jpg" alt="The No Formula — stop negotiating against yourself" />
+        </picture>
+      </div>
+
+      <div class="hero-copy">
+        <span class="eyebrow">A field guide to saying no</span>
+        <h1>The No Formula</h1>
+        <p class="sub">Stop negotiating against yourself.</p>
+
+        <div class="hero-hook">
+          <p>"Hey, are you busy Thurs—" "No, what's up?" Your yes left before the question even finished. It wasn't kindness — it was a reflex with good manners. This book hands you the exact words to close the four doors you keep negotiating through.</p>
+        </div>
+
+        <!-- ===== LAUNCH OFFER (edit price + date here) ===== -->
+        <div class="offer">
+          <div class="price-row">
+            <span class="now">$9</span>
+            <span class="was">$19</span>
+          </div>
+          <div class="launch-note">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+            <span><strong>Launch price</strong> — until July 14, 2026</span>
+          </div>
+
+          <!-- Replace href with your Polar checkout link for THE NO FORMULA -->
+          <a class="buy" href="https://buy.polar.sh/REPLACE_WITH_NOFORMULA_LINK">Get instant access</a>
+          <p class="reassure">Instant access · Secure checkout via Polar · No account needed<br/>Sales are generally final once downloaded — <a href="refund.html">if something's wrong, we'll make it right</a> within 7 days.</p>
+        </div>
+
+        <div class="meta">
+          <div><div class="k">Format</div><div class="v">PDF</div></div>
+          <div><div class="k">Length</div><div class="v">5 chapters + scripts</div></div>
+          <div><div class="k">Read time</div><div class="v">About an hour</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOOK ============ -->
+    <section class="section stmt">
+      <div class="wrap">
+        <div class="eyebrow">The yes that wasn't a decision</div>
+        <h2 style="margin-top:12px;">At what point did you actually decide?</h2>
+        <p style="margin-top:18px;">Scan the tape. The moment where you weighed the request, checked your Thursday, and chose — it isn't there. The yes fired before the question finished loading, the way your leg jumps when the doctor taps your knee.</p>
+        <p class="beats" style="margin-top:24px;">The negotiation was never with them. It was with you.</p>
+        <p class="soft">And you've been losing it so fast you never knew it was happening. Every door is on your side of the wall — which means you hold all the keys.</p>
+      </div>
+    </section>
+
+    <!-- ============ THE FOUR DOORS (chapters) ============ -->
+    <section class="section">
+      <div class="wrap">
+        <div class="eyebrow">Inside the book</div>
+        <h2 style="margin-top:12px;">Four doors, one opponent</h2>
+        <p class="lead">Not one of these moments involves the other person pressuring you. In every scene, the pressure is self-supplied — so every fix is yours.</p>
+        <ol class="doors">
+          <li><div><div class="d-title">Before the sentence</div><div class="d-desc">The reflex yes that fires mid-question — and the six words that buy the decision back.</div></div></li>
+          <li><div><div class="d-title">Inside the sentence</div><div class="d-desc">The Second Sentence Problem: why every reason you add reopens the negotiation.</div></div></li>
+          <li><div><div class="d-title">After the sentence</div><div class="d-desc">The three seconds of silence — and why you're the one who cracks first.</div></div></li>
+          <li><div><div class="d-title">Same words, different rooms</div><div class="d-desc">The boss, the family clause, the repeat asker: same formula, different volume.</div></div></li>
+          <li><div><div class="d-title">Long after the sentence</div><div class="d-desc">11:24 p.m. — the take-back text nobody asked for, and how to let it die in drafts.</div></div></li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ THE FOUR FORMULAS ============ -->
+    <section class="section">
+      <div class="wrap">
+        <div class="eyebrow">What you'll own</div>
+        <h2 style="margin-top:12px;">Four formulas, memorized cold</h2>
+        <div class="formulas">
+          <div class="formula">
+            <div class="f-name">The Buffer Line</div>
+            <div class="f-line">"Let me check and get back to you."</div>
+            <div class="f-desc">Six words that put a gap where the reflex used to be.</div>
+          </div>
+          <div class="formula">
+            <div class="f-name">The Closed No</div>
+            <div class="f-line">Acknowledge. Decline. Stop.</div>
+            <div class="f-desc">A refusal with nothing left in it to solve.</div>
+          </div>
+          <div class="formula">
+            <div class="f-name">The Silence Tax</div>
+            <div class="f-line">Say it. Shut it. Count it.</div>
+            <div class="f-desc">Survive the three seconds without buying your no back.</div>
+          </div>
+          <div class="formula">
+            <div class="f-name">The Take-Back Window</div>
+            <div class="f-line">For 48 hours, you owe nothing extra.</div>
+            <div class="f-desc">Let the reversal urge expire instead of feeding it.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SCRIPTS ============ -->
+    <section class="section">
+      <div class="wrap">
+        <div class="eyebrow">Not theory — exact words</div>
+        <h2 style="margin-top:12px;">Copy-paste scripts for every room</h2>
+        <p style="margin-top:16px;">Every chapter ends with the real sentences — what you say now, and what to say instead. A few from inside:</p>
+        <div class="scripts">
+          <div class="script">
+            <div class="situation">The weekend work request</div>
+            <div class="line old"><span class="mk">✕</span><span class="tx">"I'm so sorry, I wish I could, but this weekend is packed — my in-laws are here and I'm buried in the Delgado file. Any other time!"</span></div>
+            <div class="line new"><span class="mk">✓</span><span class="tx">"I know Monday's tight — I can't take this one on."</span></div>
+          </div>
+          <div class="script">
+            <div class="situation">The favor that's actually an assignment</div>
+            <div class="line old"><span class="mk">✕</span><span class="tx">"Sure, I guess I could probably squeeze it in, it's just that I'm slammed, but if no one else can…"</span></div>
+            <div class="line new"><span class="mk">✓</span><span class="tx">"That one's not mine to take. Have you asked Priya?"</span></div>
+          </div>
+          <div class="script">
+            <div class="situation">The pressure ask — "I need an answer now"</div>
+            <div class="line old"><span class="mk">✕</span><span class="tx">"Oh — um, okay, sure then, I guess."</span></div>
+            <div class="line new"><span class="mk">✓</span><span class="tx">"If it has to be right now, it's a no. If it can wait till tonight, it's a maybe."</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ READ A SAMPLE ============ -->
+    <section class="section">
+      <div class="wrap">
+        <div class="eyebrow">A look inside</div>
+        <h2 style="margin-top:12px;">Read a sample</h2>
+        <div class="preview">
+          <div class="preview-label">From Chapter 1 — The yes that wasn't a decision</div>
+          <p>Tuesday, 2:15 PM. A coworker rolls her chair toward your desk.</p>
+          <p class="dialogue">"Hey, are you busy Thurs—"<br/>"No, what's up?"</p>
+          <p>Stop the tape. Play it back and look at the timestamps. Her question had not ended. The word <em>Thursday</em> was still coming out of her mouth. You have no information. And your answer already left.</p>
+          <p>Here is the question this book starts with: at what point in that exchange did you decide anything?…</p>
+          <div class="fade"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ WHO IT'S FOR ============ -->
+    <section class="section">
+      <div class="wrap">
+        <div class="eyebrow">Who it's for</div>
+        <h2 style="margin-top:12px;">You'll recognize yourself here</h2>
+        <ul class="checklist">
+          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>Your "yes" is out before the question even finishes.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>You staple three reasons to every no.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>You crack in the silence right after you decline.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>You draft the take-back text nobody asked for at 11 p.m.</li>
+          <li><svg viewBox="0 0 24 24"><path d="M5 12l4 4 10-10"/></svg>You've told yourself "I'm just too nice" for years.</li>
+        </ul>
+        <p style="margin-top:22px; font-weight:600; color:#1A1A1A;">If you marked even one, this book was written for you.</p>
+      </div>
+    </section>
+
+    <!-- ============ SCIENCE ============ -->
+    <section class="section">
+      <div class="wrap">
+        <div class="eyebrow">Where it leans on research</div>
+        <h2 style="margin-top:12px;">Honest about what's proven</h2>
+        <p style="margin-top:16px;">Most of the book rests on replaying your own behavior — but where research sharpens the point, it's named plainly:</p>
+        <ul class="studies">
+          <li><strong>Patrick &amp; Hagtvedt, 2012</strong> — "I don't" vs "I can't": how the words you refuse with change how firmly you hold the line</li>
+          <li><strong>Gilovich et al., 2000</strong> — the spotlight effect: others think about your no far less than you fear they do</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ============ WHAT CHANGES ============ -->
+    <section class="section">
+      <div class="wrap">
+        <div class="eyebrow">What changes</div>
+        <h2 style="margin-top:12px;">The whole shift, side by side</h2>
+        <table class="changed">
+          <thead>
+            <tr><th>What you do now</th><th class="col-arrow"></th><th>What the formula does</th></tr>
+          </thead>
+          <tbody>
+            <tr><td class="old">The reflex yes</td><td class="col-arrow">→</td><td class="new">A decision you actually made</td></tr>
+            <tr><td class="old">A paragraph of reasons</td><td class="col-arrow">→</td><td class="new">Acknowledge. Decline. Stop.</td></tr>
+            <tr><td class="old">Cracking in the silence</td><td class="col-arrow">→</td><td class="new">Paying the silence tax</td></tr>
+            <tr><td class="old">The 11 p.m. take-back</td><td class="col-arrow">→</td><td class="new">A no that stays no</td></tr>
+            <tr><td class="old">"I'm just too nice"</td><td class="col-arrow">→</td><td class="new">Nice by choice, not reflex</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- ============ CROSS-LINK TO PROGRAMS ============ -->
+    <section class="section">
+      <div class="wrap">
+        <div class="callout">
+          <div class="eyebrow">After you read it</div>
+          <h2>Reading won't retrain a reflex. Repetition will.</h2>
+          <p>The No Formula is the map — it shows you every door and hands you the words. If you want to train the reflex over a week, in live conversations, that's exactly what the 7-day programs are built for.</p>
+          <a class="link" href="the-fence.html">See The Fence — the 7-day boundary program →</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="section faq">
+      <div class="wrap">
+        <div class="eyebrow">Questions</div>
+        <h2 style="margin-top:12px;">Good to know</h2>
+        <div style="margin-top:20px;">
+          <details open>
+            <summary>Is this a 7-day program like the others?</summary>
+            <p>No. The No Formula is a field guide you can read in about an hour, packed with copy-paste scripts. To train the reflex over a week in real conversations, see the <a href="index.html#store">7-day programs</a>.</p>
+          </details>
+          <details>
+            <summary>Won't short, no-reason refusals sound rude?</summary>
+            <p>That's the exact fear the book takes apart — and shows why a short, warm no lands softer than a paragraph of excuses. Every formula keeps the warmth and drops the leak.</p>
+          </details>
+          <details>
+            <summary>How is this different from The Fence?</summary>
+            <p>The Fence trains the reflex over 7 guided days. The No Formula hands you the exact words for every room — the boss, the family clause, the repeat asker. Many people use both.</p>
+          </details>
+          <details>
+            <summary>What format is it, and how do I get it?</summary>
+            <p>Instant digital download (PDF), readable on phone, tablet, or computer. The download appears right after checkout and is emailed to you automatically — no account required.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ FINAL CTA ============ -->
+  <section class="final">
+    <div class="wrap">
+      <h2>Get your no back.</h2>
+      <div class="stmt">
+        <p>Not louder. Not colder. Just yours — a decision that stays closed after it leaves your mouth.</p>
+      </div>
+      <p class="signature">The negotiation was never with them. It was with you.</p>
+      <div class="price-row">
+        <span class="now">$9</span>
+        <span class="was">$19</span>
+      </div>
+      <a class="buy" href="https://buy.polar.sh/REPLACE_WITH_NOFORMULA_LINK">Get instant access</a>
+      <div class="launch-note" style="display:inline-flex;">
+        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+        <span><strong>Launch price ends July 14, 2026.</strong> After that, it returns to $19.</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="mailto:architect@anchors.work">Contact</a>
+        <a href="refund.html">Refund policy</a>
+        <a href="privacy.html">Privacy policy</a>
+        <a href="terms.html">Terms of service</a>
+      </div>
+      <div class="copyright">© 2026 Why Humans Do That. All rights reserved.</div>
+    </div>
+  </footer>
+
+</body>
+</html>
