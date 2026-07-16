@@ -119,6 +119,11 @@
       gap: 36px 28px;
     }
 
+    .store-section + .store-section { margin-top: 52px; padding-top: 44px; border-top: 1px solid var(--border); }
+    .store-head { margin-bottom: 26px; }
+    .store-title { font-size: 22px; font-weight: 700; letter-spacing: -0.02em; }
+    .store-sub { font-size: 15px; color: var(--text-muted); margin-top: 6px; }
+
     .card { display: block; }
     .card-media {
       position: relative;
@@ -292,7 +297,14 @@
 
   <!-- Store -->
   <main id="store">
-    <div class="grid">
+
+    <!-- ============ PROGRAMS ============ -->
+    <section class="store-section">
+      <div class="store-head">
+        <h2 class="store-title">Programs</h2>
+        <p class="store-sub">7-day training, one behavior at a time.</p>
+      </div>
+      <div class="grid">
 
       <!-- ===== PRODUCT CARD ===== -->
       <!-- Card links to the product detail page; the "Buy now" there goes to Polar -->
@@ -356,7 +368,41 @@
         </div>
       </div>
 
-    </div>
+      </div>
+    </section>
+
+    <!-- ============ GUIDES ============ -->
+    <section class="store-section">
+      <div class="store-head">
+        <h2 class="store-title">Guides</h2>
+        <p class="store-sub">Short, practical reads you can use today.</p>
+      </div>
+      <div class="grid">
+
+      <!-- ===== THE NO FORMULA ===== -->
+      <a class="card" href="the-no-formula.html">
+        <div class="card-media">
+          <span class="badge">FIELD GUIDE</span>
+          <picture>
+            <source type="image/webp" srcset="noformula.webp" />
+            <img src="noformula.jpg" alt="The No Formula — a field guide to saying no" />
+          </picture>
+        </div>
+        <div class="card-body">
+          <div class="card-title">The No Formula</div>
+          <div class="card-blurb">The psychology of saying no — plus copy-paste scripts for every room.</div>
+          <div class="card-foot">
+            <div class="price">
+              <span class="now">$9</span>
+              <span class="was">$19</span>
+            </div>
+            <span class="buy">View →</span>
+          </div>
+        </div>
+      </a>
+
+      </div>
+    </section>
 
     <!-- Trust row -->
     <div class="trust">
