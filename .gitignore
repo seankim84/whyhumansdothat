@@ -3,3 +3,10 @@ FirstBook_image.png
 2cover.jpg
 thenoformula.png
 .claude/
+
+# wrangler files
+.wrangler
+.dev.vars*
+!.dev.vars.example
+.env*
+!.env.example
